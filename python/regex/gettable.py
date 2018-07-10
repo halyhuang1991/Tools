@@ -8,6 +8,7 @@ try:
     text=f.read().upper().replace("("," ")
     if text.strip()=="":
         raise Exception("file is empty! ")
+        #exit(1)
     arr=[]
     arr1=re.findall(r"insert into (.*?) ".upper(),text)
     arr=arr+arr1
