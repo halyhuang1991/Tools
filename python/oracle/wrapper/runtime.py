@@ -2,6 +2,7 @@ import time
 import sys,os
 # parentdir = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) 
 # sys.path.insert(0,parentdir)  
+from next import run1
 def runtime(func):
     def wrapper(*arg,**kw):
         start_time = time.time()
@@ -14,7 +15,7 @@ def log():
     print('ok')
 log() """
 
-oraTest.log()
+run1.log()
 
 
 
