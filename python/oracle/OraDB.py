@@ -38,7 +38,7 @@ class BaseDB(object):
       proc = Popen("sqlplus "+gStrConnection, stdout=PIPE,
                  stdin=PIPE, stderr=PIPE, shell=True)
       proc.stdin.write(bytes(sql, "UTF-8"))
-       (out, err) = proc.communicate()
+      (out, err) = proc.communicate()
       os.kill(proc.pid,0)
       if proc.returncode != 0:
         print(err)
