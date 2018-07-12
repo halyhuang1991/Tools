@@ -14,9 +14,13 @@ def QueryOra(sqlCom):
     return ""
     #sys.exit(proc.returncode)
   else:
-    str=out.decode('utf-8').split('SQL>')[1]
-    #print(str)
-    return str
+    try:
+       str=out.decode('utf-8').split('SQL>')[1]
+       return str
+    except Exception as e:
+      print(e)
+      return ""
+   
 
 class BaseDB(object):
   def __init__(self,username,conStr):
@@ -27,23 +31,29 @@ class BaseDB(object):
                  stdin=PIPE, stderr=PIPE, shell=True)
     proc.stdin.write(bytes(sql, "UTF-8"))
     (out, err) = proc.communicate()
-    os.kill(proc.pid,0)
     if proc.returncode != 0:
       print(err)
+      os.kill(proc.pid,0)
       return ""
     else:
-      str = out.decode('utf-8').split('SQL>')[1]
+      str = out.decode('utf-8').split('SQL>')
+      if len(str)>1:
+        str=str[1]
+      os.kill(proc.pid,0)
       return str
   def Exec(self,sql):
       proc = Popen("sqlplus "+gStrConnection, stdout=PIPE,
                  stdin=PIPE, stderr=PIPE, shell=True)
       proc.stdin.write(bytes(sql, "UTF-8"))
       (out, err) = proc.communicate()
-      os.kill(proc.pid,0)
       if proc.returncode != 0:
         print(err)
+        os.kill(proc.pid,0)
       else:
-        print('ok')
+        print(out)
+        os.kill(proc.pid,0)
+      
+     
 
 
 
