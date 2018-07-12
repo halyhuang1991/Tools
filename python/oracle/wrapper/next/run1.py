@@ -1,2 +1,3 @@
 def log():
     print('ok')
+
