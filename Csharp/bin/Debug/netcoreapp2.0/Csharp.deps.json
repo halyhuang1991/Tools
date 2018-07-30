@@ -1,0 +1,300 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.0",
+    "signature": "451d3a3c6ffa2994ed96ed7a9b372cee7bc1cd37"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.0": {
+      "Csharp/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2",
+          "StackExchange.Redis": "2.0.0-alpha.206"
+        },
+        "runtime": {
+          "Csharp.dll": {}
+        }
+      },
+      "Microsoft.Win32.Registry/4.5.0": {
+        "dependencies": {
+          "System.Memory": "4.5.0",
+          "System.Security.AccessControl": "4.5.0",
+          "System.Security.Principal.Windows": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Win32.Registry.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
+            "rid": "unix",
+            "assetType": "runtime"
+          },
+          "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      },
+      "Newtonsoft.Json/11.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Pipelines.Sockets.Unofficial/0.2.1-alpha.68": {
+        "dependencies": {
+          "System.Buffers": "4.5.0",
+          "System.IO.Pipelines": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Pipelines.Sockets.Unofficial.dll": {}
+        }
+      },
+      "StackExchange.Redis/2.0.0-alpha.206": {
+        "dependencies": {
+          "Pipelines.Sockets.Unofficial": "0.2.1-alpha.68",
+          "System.Diagnostics.PerformanceCounter": "4.5.0",
+          "System.IO.Pipelines": "4.5.0",
+          "System.Threading.Channels": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/StackExchange.Redis.dll": {}
+        }
+      },
+      "System.Buffers/4.5.0": {},
+      "System.Configuration.ConfigurationManager/4.5.0": {
+        "dependencies": {
+          "System.Security.Cryptography.ProtectedData": "4.5.0",
+          "System.Security.Permissions": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
+        }
+      },
+      "System.Diagnostics.PerformanceCounter/4.5.0": {
+        "dependencies": {
+          "Microsoft.Win32.Registry": "4.5.0",
+          "System.Configuration.ConfigurationManager": "4.5.0",
+          "System.Memory": "4.5.0",
+          "System.Security.Principal.Windows": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Diagnostics.PerformanceCounter.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/System.Diagnostics.PerformanceCounter.dll": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      },
+      "System.IO.Pipelines/4.5.0": {
+        "dependencies": {
+          "System.Memory": "4.5.0",
+          "System.Threading.Tasks.Extensions": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.IO.Pipelines.dll": {}
+        }
+      },
+      "System.Memory/4.5.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.0": {
+        "runtime": {
+          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
+      "System.Security.AccessControl/4.5.0": {
+        "dependencies": {
+          "System.Security.Principal.Windows": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.AccessControl.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      },
+      "System.Security.Cryptography.ProtectedData/4.5.0": {
+        "dependencies": {
+          "System.Memory": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      },
+      "System.Security.Permissions/4.5.0": {
+        "dependencies": {
+          "System.Security.AccessControl": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Permissions.dll": {}
+        }
+      },
+      "System.Security.Principal.Windows/4.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Principal.Windows.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.dll": {
+            "rid": "unix",
+            "assetType": "runtime"
+          },
+          "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.dll": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      },
+      "System.Threading.Channels/4.5.0": {
+        "dependencies": {
+          "System.Threading.Tasks.Extensions": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Threading.Channels.dll": {}
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Csharp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Win32.Registry/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vduxuHEqRgRrTE8wYG8Wxj/+6wwzddOmZzjKZx6rFMc/91aUBxI5etAFYxesoNaIja5NpgSTcnk6cN8BeYXf9A==",
+      "path": "microsoft.win32.registry/4.5.0",
+      "hashPath": "microsoft.win32.registry.4.5.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/11.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+      "path": "newtonsoft.json/11.0.2",
+      "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
+    },
+    "Pipelines.Sockets.Unofficial/0.2.1-alpha.68": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MKwv1qAkIk8Nd+9hZpPraJlLxh7JAcShay311zGYD6vv13I6EVuRb12006WfxZ7xRlUtSKkv+tUIhuFOHiKWvw==",
+      "path": "pipelines.sockets.unofficial/0.2.1-alpha.68",
+      "hashPath": "pipelines.sockets.unofficial.0.2.1-alpha.68.nupkg.sha512"
+    },
+    "StackExchange.Redis/2.0.0-alpha.206": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XC6sJdwth6fEVIUSdDnlIyOZ9Tgl4eRH8T1sg5rdGO/fES/42kuXNYtyXkBZUu6b5etFh0ep8UYYsHOWetI+cQ==",
+      "path": "stackexchange.redis/2.0.0-alpha.206",
+      "hashPath": "stackexchange.redis.2.0.0-alpha.206.nupkg.sha512"
+    },
+    "System.Buffers/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xpHYjjtyTEpzMwtSQBWdVc3dPjLdQtvyUg6fBlBqcLl1r2Y7gDG/W/enAYOB98nG3oD3Q153Y2FBO8JDWd+0Xw==",
+      "path": "system.buffers/4.5.0",
+      "hashPath": "system.buffers.4.5.0.nupkg.sha512"
+    },
+    "System.Configuration.ConfigurationManager/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NIY8VUJuSNeXPrV5wjQBKKMcd/vctzEGzQuY15zt3/j7Vd4PXfk/QVIOBlqU1/ONRRUu0dsdk5uUTLSSNY+now==",
+      "path": "system.configuration.configurationmanager/4.5.0",
+      "hashPath": "system.configuration.configurationmanager.4.5.0.nupkg.sha512"
+    },
+    "System.Diagnostics.PerformanceCounter/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eT8/JtodKzx0rnDwe8hdQE8FPM6m9djYy7B2IXEHTu6pfmtTYtsh7ekYG9dATqiVxMWrVZq5fu5hWdPfr0FVwg==",
+      "path": "system.diagnostics.performancecounter/4.5.0",
+      "hashPath": "system.diagnostics.performancecounter.4.5.0.nupkg.sha512"
+    },
+    "System.IO.Pipelines/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Kq9eZWVKN9khHhkatLWLLxYCs3j9qSNMZELqn2YG1YsCMv6bPmAtaN0CfA6l7vxFbiV02C996Dy7yHO8DkaJLg==",
+      "path": "system.io.pipelines/4.5.0",
+      "hashPath": "system.io.pipelines.4.5.0.nupkg.sha512"
+    },
+    "System.Memory/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-P56/L4B9vhz0YFTC4qIXFgx+VgMhg3JhCm5/EASihTotyjwmBt2QEAQdmd2tNctYET/w0CRJzVH1cwxgbKGnDQ==",
+      "path": "system.memory/4.5.0",
+      "hashPath": "system.memory.4.5.0.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6zBxkHYemB0kQiHP3vGXGRXejZVoNVuMn2paUuqKKi5Wyjkxfkp+D0rd0c3VrGwotidRINt6KpOi2smL4VkJKw==",
+      "path": "system.runtime.compilerservices.unsafe/4.5.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512"
+    },
+    "System.Security.AccessControl/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aVjTe36YkO8FzfNhMLoPEzv3gF9rphoW9ngFhG/MH4zzEPLx07sNrgCLwMP4Wx2leI6qarMrGv21OwQXYUKLmw==",
+      "path": "system.security.accesscontrol/4.5.0",
+      "hashPath": "system.security.accesscontrol.4.5.0.nupkg.sha512"
+    },
+    "System.Security.Cryptography.ProtectedData/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wZGwRoLGTuEQBOYXlZmEK41OfmO+vYWbLk7q5ePoFqs6vOKP2kUsOeviEjQoR6MbW9udlDjx9iWhcWOTzSj05w==",
+      "path": "system.security.cryptography.protecteddata/4.5.0",
+      "hashPath": "system.security.cryptography.protecteddata.4.5.0.nupkg.sha512"
+    },
+    "System.Security.Permissions/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vDQ7q30Soe0a1cPhvxn+7IFmMeTG5IP+hTQrnKQDjTNpD2epqwbZSzMM2Git5TXBr4Kwwhc/0SEtJY0qPoiegA==",
+      "path": "system.security.permissions/4.5.0",
+      "hashPath": "system.security.permissions.4.5.0.nupkg.sha512"
+    },
+    "System.Security.Principal.Windows/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WA9ETb/pY3BjnxKjBUHEgO59B7d/nnmjHFsqjJ2eDT780nD769CT1/bw2ia0Z6W7NqlcqokE6sKGKa6uw88XGA==",
+      "path": "system.security.principal.windows/4.5.0",
+      "hashPath": "system.security.principal.windows.4.5.0.nupkg.sha512"
+    },
+    "System.Threading.Channels/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Js7f30DXMo1plMo32fOpKF7AhCmuKyOKDT1fSayntGGOVfF5V/xKVu1UPI3N+/hTXuqKKgB++eACPZ120uLpGg==",
+      "path": "system.threading.channels/4.5.0",
+      "hashPath": "system.threading.channels.4.5.0.nupkg.sha512"
+    },
+    "System.Threading.Tasks.Extensions/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cWndlAQKAhHfsS6rZbYEE07HXJI9dPdyMAPOXXnVUO+hm+3G6qneMIqLDesoNBiVAPsKErsUVa2N/FRSKi+SeA==",
+      "path": "system.threading.tasks.extensions/4.5.0",
+      "hashPath": "system.threading.tasks.extensions.4.5.0.nupkg.sha512"
+    }
+  }
+}

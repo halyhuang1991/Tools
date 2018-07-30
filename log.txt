@@ -4,3 +4,15 @@ git add README.md
 git commit -m "first commit"
 git remote add origin git@github.com:halyhuang1991/Tools.git
 git push -u origin master
+
+
+java   
+1.Java Extension Pack/Java Imports Snippets/Java Language Support/Language Support for Java(TM) by Red Hat
+2.java debuger/Java run/java debug       Ctrl+c,Ctrl+r/ctrl+b
+
+c#
+cd ./Csharp
+dotnet new console
+ctrl+shift+P   => nuget+add package=>StackExchange.Redis=>restore
+dotnet run
+
