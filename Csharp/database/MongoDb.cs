@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-
+using MongoDB.Bson;
 using MongoDB.Driver;
 
 namespace Csharp
@@ -25,7 +25,7 @@ namespace Csharp
                 set.Servers = servers;
                 set.MaxConnectionPoolSize = 2000;//设置连接池最大连接数
                 //set.ReplicaSetName = "MongReplicaSetName";//设置副本集名称
-                //set.ConnectTimeout = new TimeSpan(0, 0, 0, 1000, 0);
+                set.ConnectTimeout = new TimeSpan(0, 0, 0, 10, 0);
                 set.ReadPreference = new ReadPreference(ReadPreferenceMode.SecondaryPreferred);
                 // MongoCredential credential = MongoCredential.CreateCredential(DatabaseName,"username", "password");
                 // set.Credential=credential;
@@ -77,6 +77,38 @@ namespace Csharp
                 result.Add(entity);
             }
             return result;
+        }
+        public void InserBatch(){
+            MongoCollection col = this.repository.GetCollection("Users");
+            BsonDocument[] batch = {
+                new BsonDocument {
+                    { "author", "Kurt Vonnegut" },
+                    { "title", "Cat's Cradle" }
+                },
+                new BsonDocument {
+                    { "author", "Kurt Vonnegut" },
+                    { "title", "Slaughterhouse-Five" }
+                }
+            };
+            col.InsertBatch(batch);
+        }
+        public void Save(){
+            MongoCollection books = this.repository.GetCollection("Users");
+            var query = new QueryDocument {
+                { "author", "Kurt Vonnegut" },
+                { "title", "Cats Craddle" }
+            };
+            BsonDocument book = books.FindOneAs<BsonDocument>(query);
+            Console.WriteLine(book.ToString());
+            if (book != null)
+            {
+                book["title"] = "Cat's Cradle";
+                books.Save(book);
+            }
+            var update = new UpdateDocument {
+                { "$set", new BsonDocument("title", "Cat's Cradle") }
+            };
+            var updatedBook = books.Update(query, update);
         }
           
     }
