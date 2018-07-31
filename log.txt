@@ -16,3 +16,5 @@ dotnet new console
 ctrl+shift+P   => nuget+add package=>StackExchange.Redis=>restore
 dotnet run
 
+dotnet add package mongocsharpdriver --version 2.7.0 
+
