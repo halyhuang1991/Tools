@@ -9,13 +9,12 @@ namespace Csharp
     {
         static void Main(string[] args)
         {
-           MongoDbGo();
-           MongoDbDo();
+        
             Console.WriteLine("Hello World!");
             Console.ReadKey();
         }
         private static void redisGo(){
-            redis.SetString("key", "value123");
+             redis.SetString("key", "value123");
              Console.WriteLine(redis.GetString("key2"));
              Console.WriteLine(redis.GetString("2"));
              //----------------------------
@@ -40,11 +39,12 @@ namespace Csharp
         }
         private static  void MongoDbDo(){
               string[] arr=new string[1]{"127.0.0.1:27017"};
+             // arr=new string[3]{"127.0.0.1:27016","127.0.0.1:27018","127.0.0.1:27019"};
               MongoDb tl = new MongoDb(arr,"MongoDB");
               users user=new users();
               user.Name ="haly123";
               user.Sex ="ok";
-              //tl.Insert<users>(user);
+              tl.Insert<users>(user);
               List<users> ls=tl.Query<users>();
               foreach(users str in ls){
                   Console.WriteLine(str.Name);

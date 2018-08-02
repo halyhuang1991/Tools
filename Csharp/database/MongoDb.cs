@@ -24,7 +24,9 @@ namespace Csharp
                 
                 set.Servers = servers;
                 set.MaxConnectionPoolSize = 2000;//设置连接池最大连接数
-                //set.ReplicaSetName = "MongReplicaSetName";//设置副本集名称
+                if(dic.Length>1){
+                       set.ReplicaSetName = "testrs";//设置副本集名称
+                }
                 set.ConnectTimeout = new TimeSpan(0, 0, 0, 10, 0);
                 set.ReadPreference = new ReadPreference(ReadPreferenceMode.SecondaryPreferred);
                 // MongoCredential credential = MongoCredential.CreateCredential(DatabaseName,"username", "password");
