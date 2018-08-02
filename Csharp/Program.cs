@@ -11,7 +11,7 @@ namespace Csharp
         {
         
             Console.WriteLine("Hello World!");
-            Console.ReadKey();
+            //Console.ReadKey();
         }
         private static void redisGo(){
              redis.SetString("key", "value123");
