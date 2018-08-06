@@ -9,9 +9,21 @@ namespace Csharp
     {
         static void Main(string[] args)
         {
-        
+          
             Console.WriteLine("Hello World!");
             //Console.ReadKey();
+        }
+       
+        private static void DesignPublish(){
+            Publish p = new Publish();
+            Subscriber sub = new Subscriber("one");
+            Subscriber sub1 = new Subscriber("Two");
+            p.AddObserver(sub);
+            p.AddObserver(sub1);
+            p.Update();
+            p.RemoveObserver(sub1);
+            Console.WriteLine("Remove Observer!");
+            p.Update();
         }
         private static void redisGo(){
              redis.SetString("key", "value123");
