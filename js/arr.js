@@ -34,8 +34,10 @@ r.add('as');
 console.log(r.arr);
 r.removeAll(1);
 console.log(r.arr);
-//--------------------------
-var ww=function(){};
+//--------------------------单例模式
+var ww=function(){
+    this.element=null;
+};
 ww.extend=function(funcjson){
   for(var key in funcjson){
     ww.prototype[key]=funcjson[key];
@@ -47,7 +49,11 @@ ww.extend({
     c:new t()
 })
 ww.instance=function(){
-    return new ww();
+    if(this.element==null){
+        this.element=new ww();
+    }
+    return this.element;
+    
 }
 var w=new ww();
 w.a();
