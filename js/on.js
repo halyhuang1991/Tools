@@ -86,6 +86,6 @@ var events = {
         console.log(this.a.arr);
     }
 }
-events.add({username:'halyhuang',a:'sds'})
-events.add({username:'haly',a:'sds'})
+events.add({username:'halyhuang',a:'sds',subscribe:function(){}})
+events.add({username:'haly',a:'sds',subscribe:function(){}})
 events.update();
