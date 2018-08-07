@@ -84,8 +84,12 @@ var events = {
     },
     update:function(){
         console.log(this.a.arr);
+        for(var i in this.a.arr){
+            this.a.arr[i]['subscribe']();
+            
+        }
     }
 }
-events.add({username:'halyhuang',a:'sds',subscribe:function(){}})
-events.add({username:'haly',a:'sds',subscribe:function(){}})
+events.add({username:'halyhuang',a:'sds',subscribe:function(){console.log(this.username)}})
+events.add({username:'haly',a:'sds',subscribe:function(){console.log(this.username)}})
 events.update();
