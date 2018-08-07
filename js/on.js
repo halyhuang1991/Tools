@@ -62,3 +62,30 @@ s.on('o',function(){
     console.log('ok');
 })
 s.trigger('o');
+//------------------------------观察者模式
+var events = {
+    a: {
+        arr: []
+    },
+    indexOf :function (val) {
+        for (var i = 0; i < this.a.arr.length; i++) {
+            if (this.a.arr[i] == val) return i;
+        }
+        return -1;
+    },
+    add: function (val) {
+        this.a.arr.push(val);
+    },
+    remove : function (val) {
+        var index = this.indexOf(val);
+        if (index > -1) {
+            this.a.arr.splice(index, 1);
+        }
+    },
+    update:function(){
+        console.log(this.a.arr);
+    }
+}
+events.add({username:'halyhuang',a:'sds'})
+events.add({username:'haly',a:'sds'})
+events.update();
