@@ -4,8 +4,10 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="mongocsharpdriver" Version="2.7.0" />
-    <PackageReference Include="StackExchange.Redis" Version="2.0.0-alpha.206" />
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="mongocsharpdriver" Version="2.7.0"/>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2"/>
+    <PackageReference Include="ServiceStack" Version="5.1.0"/>
+    <PackageReference Include="ServiceStack.OrmLite" Version="5.1.0"/>
+    <PackageReference Include="nunit.framework" Version="2.63.0"/>
   </ItemGroup>
 </Project>
