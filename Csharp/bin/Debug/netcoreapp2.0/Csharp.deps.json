@@ -1,17 +1,18 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "fe01c0e797c83e20a9648dce603fb81e56e3467d"
+    "signature": "7379918c536b696a65a5e246880cdcace380967e"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "Csharp/1.0.0": {
         "dependencies": {
+          "NServiceKit.Redis": "1.0.20",
           "Newtonsoft.Json": "11.0.2",
           "ServiceStack": "5.1.0",
           "ServiceStack.OrmLite": "5.1.0",
-          "StackExchange.Redis": "2.0.0-alpha.206",
+          "StackExchange.Redis": "2.0.0-alpha.281",
           "mongocsharpdriver": "2.7.0",
           "nunit.framework": "2.63.0"
         },
@@ -270,12 +271,35 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "NServiceKit.Common/1.0.31": {
+        "dependencies": {
+          "NServiceKit.Text": "1.0.10"
+        },
+        "runtime": {
+          "lib/net35/NServiceKit.Common.dll": {},
+          "lib/net35/NServiceKit.Interfaces.dll": {}
+        }
+      },
+      "NServiceKit.Redis/1.0.20": {
+        "dependencies": {
+          "NServiceKit.Common": "1.0.31",
+          "NServiceKit.Text": "1.0.10"
+        },
+        "runtime": {
+          "lib/net35/NServiceKit.Redis.dll": {}
+        }
+      },
+      "NServiceKit.Text/1.0.10": {
+        "runtime": {
+          "lib/net35/NServiceKit.Text.dll": {}
+        }
+      },
       "nunit.framework/2.63.0": {
         "runtime": {
           "lib/nunit.framework.dll": {}
         }
       },
-      "Pipelines.Sockets.Unofficial/0.2.1-alpha.68": {
+      "Pipelines.Sockets.Unofficial/0.2.1-alpha.77": {
         "dependencies": {
           "System.Buffers": "4.5.0",
           "System.IO.Pipelines": "4.5.0"
@@ -529,9 +553,9 @@
           "lib/netstandard2.0/ServiceStack.Text.dll": {}
         }
       },
-      "StackExchange.Redis/2.0.0-alpha.206": {
+      "StackExchange.Redis/2.0.0-alpha.281": {
         "dependencies": {
-          "Pipelines.Sockets.Unofficial": "0.2.1-alpha.68",
+          "Pipelines.Sockets.Unofficial": "0.2.1-alpha.77",
           "System.Diagnostics.PerformanceCounter": "4.5.0",
           "System.IO.Pipelines": "4.5.0",
           "System.Threading.Channels": "4.5.0"
@@ -1883,6 +1907,27 @@
       "path": "newtonsoft.json/11.0.2",
       "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
     },
+    "NServiceKit.Common/1.0.31": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-N/Ym0S3OYP0J1cVqu8ghldHE02/GSqlzeB2uBoSASuckAvjF3j2AG/+SMq9GdHxSJd5RkGoujc47E/C7BpGfqw==",
+      "path": "nservicekit.common/1.0.31",
+      "hashPath": "nservicekit.common.1.0.31.nupkg.sha512"
+    },
+    "NServiceKit.Redis/1.0.20": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BYl0aoZcL3Fil4BIjoiKVz9kJVak1lh1HM5bmQj15HSGoXFgsSXvtaBbwvhUfmELwCQ4BvRRqHSfut3zjENxkw==",
+      "path": "nservicekit.redis/1.0.20",
+      "hashPath": "nservicekit.redis.1.0.20.nupkg.sha512"
+    },
+    "NServiceKit.Text/1.0.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ySxZIjt/6yywQSTJ+AiRvbfT6sVNLHEmY2mxITl40ZBt94/73wRh93wun/i33B1UMNbg4O7Buhbg+5qlg+5oQg==",
+      "path": "nservicekit.text/1.0.10",
+      "hashPath": "nservicekit.text.1.0.10.nupkg.sha512"
+    },
     "nunit.framework/2.63.0": {
       "type": "package",
       "serviceable": true,
@@ -1890,12 +1935,12 @@
       "path": "nunit.framework/2.63.0",
       "hashPath": "nunit.framework.2.63.0.nupkg.sha512"
     },
-    "Pipelines.Sockets.Unofficial/0.2.1-alpha.68": {
+    "Pipelines.Sockets.Unofficial/0.2.1-alpha.77": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-MKwv1qAkIk8Nd+9hZpPraJlLxh7JAcShay311zGYD6vv13I6EVuRb12006WfxZ7xRlUtSKkv+tUIhuFOHiKWvw==",
-      "path": "pipelines.sockets.unofficial/0.2.1-alpha.68",
-      "hashPath": "pipelines.sockets.unofficial.0.2.1-alpha.68.nupkg.sha512"
+      "sha512": "sha512-bLBalqXOCMPKzPxHdosTVA+fK4n3mNQgD3xVTndc3UQDSznSxq3u9nGLZVCf+EDFkZ+BFkedLFxUGWB/fL4K4w==",
+      "path": "pipelines.sockets.unofficial/0.2.1-alpha.77",
+      "hashPath": "pipelines.sockets.unofficial.0.2.1-alpha.77.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
@@ -2086,12 +2131,12 @@
       "path": "servicestack.text/5.1.0",
       "hashPath": "servicestack.text.5.1.0.nupkg.sha512"
     },
-    "StackExchange.Redis/2.0.0-alpha.206": {
+    "StackExchange.Redis/2.0.0-alpha.281": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-XC6sJdwth6fEVIUSdDnlIyOZ9Tgl4eRH8T1sg5rdGO/fES/42kuXNYtyXkBZUu6b5etFh0ep8UYYsHOWetI+cQ==",
-      "path": "stackexchange.redis/2.0.0-alpha.206",
-      "hashPath": "stackexchange.redis.2.0.0-alpha.206.nupkg.sha512"
+      "sha512": "sha512-/W39E+IqJaLBGLaHu2DjHYbaA1PpCOinAH9MIJSELgWUxb+DSrkBnhD8AWb81i7PAL+D0/y3qN8d9PHcMrGDGQ==",
+      "path": "stackexchange.redis/2.0.0-alpha.281",
+      "hashPath": "stackexchange.redis.2.0.0-alpha.281.nupkg.sha512"
     },
     "System.Buffers/4.5.0": {
       "type": "package",

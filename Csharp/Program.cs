@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.IO;
 using Csharp.Models;
+using Csharp.database;
 namespace Csharp
 {
     class Program
     {
         static void Main(string[] args)
         {
+            
             Console.WriteLine("Hello World!");
             //Console.ReadKey();
         }
@@ -32,6 +34,10 @@ namespace Csharp
             PooledRedis.GetInstance.SetString("key2", "value123");
             Console.WriteLine(PooledRedis.GetInstance.GetString("key2"));
         }
+         private static void ssredisGo(){
+            var ssredis=new RedisHelper();
+            ssredis.Set<string>("NServiceKit","ok");
+         }
         private static  void MongoDbGo(){
             MongoFileBll tl = new MongoFileBll("mongodb://127.0.0.1:27017/MongoDB");
             string folder = @"C:\Users\halyhuang\Desktop\temp\txt";

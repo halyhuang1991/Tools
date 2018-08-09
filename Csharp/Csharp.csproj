@@ -9,5 +9,7 @@
     <PackageReference Include="ServiceStack" Version="5.1.0"/>
     <PackageReference Include="ServiceStack.OrmLite" Version="5.1.0"/>
     <PackageReference Include="nunit.framework" Version="2.63.0"/>
+    <PackageReference Include="NServiceKit.Redis" Version="1.0.20"/>
+    <PackageReference Include="StackExchange.Redis" Version="2.0.0-alpha.281"/>
   </ItemGroup>
 </Project>

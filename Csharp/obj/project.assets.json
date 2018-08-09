@@ -574,6 +574,42 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "NServiceKit.Common/1.0.31": {
+        "type": "package",
+        "dependencies": {
+          "NServiceKit.Text": "[1.0.0, 2.0.0)"
+        },
+        "compile": {
+          "lib/net35/NServiceKit.Common.dll": {},
+          "lib/net35/NServiceKit.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/net35/NServiceKit.Common.dll": {},
+          "lib/net35/NServiceKit.Interfaces.dll": {}
+        }
+      },
+      "NServiceKit.Redis/1.0.20": {
+        "type": "package",
+        "dependencies": {
+          "NServiceKit.Common": "[1.0.31, 2.0.0)",
+          "NServiceKit.Text": "[1.0.0, 2.0.0)"
+        },
+        "compile": {
+          "lib/net35/NServiceKit.Redis.dll": {}
+        },
+        "runtime": {
+          "lib/net35/NServiceKit.Redis.dll": {}
+        }
+      },
+      "NServiceKit.Text/1.0.10": {
+        "type": "package",
+        "compile": {
+          "lib/net35/NServiceKit.Text.dll": {}
+        },
+        "runtime": {
+          "lib/net35/NServiceKit.Text.dll": {}
+        }
+      },
       "nunit.framework/2.63.0": {
         "type": "package",
         "compile": {
@@ -583,7 +619,7 @@
           "lib/nunit.framework.dll": {}
         }
       },
-      "Pipelines.Sockets.Unofficial/0.2.1-alpha.68": {
+      "Pipelines.Sockets.Unofficial/0.2.1-alpha.77": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.5.0",
@@ -912,24 +948,6 @@
           "lib/netstandard2.0/ServiceStack.OrmLite.dll": {}
         }
       },
-      "ServiceStack.Redis/3.9.71": {
-        "type": "package",
-        "dependencies": {
-          "ServiceStack.Common": "[3.0.0, 4.0.0)"
-        },
-        "compile": {
-          "lib/net35/ServiceStack.Redis.dll": {}
-        },
-        "runtime": {
-          "lib/net35/ServiceStack.Redis.dll": {}
-        }
-      },
-      "ServiceStack.Redis.v3/1.0.3": {
-        "type": "package",
-        "dependencies": {
-          "ServiceStack.Redis": "[3.9.71, 4.0.0)"
-        }
-      },
       "ServiceStack.Text/5.1.0": {
         "type": "package",
         "dependencies": {
@@ -944,10 +962,10 @@
           "lib/netstandard2.0/ServiceStack.Text.dll": {}
         }
       },
-      "StackExchange.Redis/2.0.0-alpha.206": {
+      "StackExchange.Redis/2.0.0-alpha.281": {
         "type": "package",
         "dependencies": {
-          "Pipelines.Sockets.Unofficial": "0.2.1-alpha.68",
+          "Pipelines.Sockets.Unofficial": "0.2.1-alpha.77",
           "System.Diagnostics.PerformanceCounter": "4.5.0",
           "System.IO.Pipelines": "4.5.0",
           "System.Threading.Channels": "4.5.0"
@@ -3511,6 +3529,47 @@
         "newtonsoft.json.nuspec"
       ]
     },
+    "NServiceKit.Common/1.0.31": {
+      "sha512": "N/Ym0S3OYP0J1cVqu8ghldHE02/GSqlzeB2uBoSASuckAvjF3j2AG/+SMq9GdHxSJd5RkGoujc47E/C7BpGfqw==",
+      "type": "package",
+      "path": "nservicekit.common/1.0.31",
+      "files": [
+        "lib/net35/NServiceKit.Common.XML",
+        "lib/net35/NServiceKit.Common.dll",
+        "lib/net35/NServiceKit.Interfaces.dll",
+        "lib/net35/NServiceKit.Interfaces.xml",
+        "lib/sl5/NServiceKit.Common.XML",
+        "lib/sl5/NServiceKit.Common.dll",
+        "lib/sl5/NServiceKit.Interfaces.dll",
+        "lib/sl5/NServiceKit.Interfaces.xml",
+        "nservicekit.common.1.0.31.nupkg.sha512",
+        "nservicekit.common.nuspec"
+      ]
+    },
+    "NServiceKit.Redis/1.0.20": {
+      "sha512": "BYl0aoZcL3Fil4BIjoiKVz9kJVak1lh1HM5bmQj15HSGoXFgsSXvtaBbwvhUfmELwCQ4BvRRqHSfut3zjENxkw==",
+      "type": "package",
+      "path": "nservicekit.redis/1.0.20",
+      "files": [
+        "lib/net35/NServiceKit.Redis.XML",
+        "lib/net35/NServiceKit.Redis.dll",
+        "nservicekit.redis.1.0.20.nupkg.sha512",
+        "nservicekit.redis.nuspec"
+      ]
+    },
+    "NServiceKit.Text/1.0.10": {
+      "sha512": "ySxZIjt/6yywQSTJ+AiRvbfT6sVNLHEmY2mxITl40ZBt94/73wRh93wun/i33B1UMNbg4O7Buhbg+5qlg+5oQg==",
+      "type": "package",
+      "path": "nservicekit.text/1.0.10",
+      "files": [
+        "lib/net35/NServiceKit.Text.XML",
+        "lib/net35/NServiceKit.Text.dll",
+        "lib/sl5/NServiceKit.Text.XML",
+        "lib/sl5/NServiceKit.Text.dll",
+        "nservicekit.text.1.0.10.nupkg.sha512",
+        "nservicekit.text.nuspec"
+      ]
+    },
     "nunit.framework/2.63.0": {
       "sha512": "XEZ2A2z0ynUOAKC3cCIZ5D4UZtWflL3N4XFsjPiTZNWD9QKuMdfjBESjmUPgryBcGvbcy11oLR7O7J2f3Rmfjw==",
       "type": "package",
@@ -3522,16 +3581,16 @@
         "nunit.framework.nuspec"
       ]
     },
-    "Pipelines.Sockets.Unofficial/0.2.1-alpha.68": {
-      "sha512": "MKwv1qAkIk8Nd+9hZpPraJlLxh7JAcShay311zGYD6vv13I6EVuRb12006WfxZ7xRlUtSKkv+tUIhuFOHiKWvw==",
+    "Pipelines.Sockets.Unofficial/0.2.1-alpha.77": {
+      "sha512": "bLBalqXOCMPKzPxHdosTVA+fK4n3mNQgD3xVTndc3UQDSznSxq3u9nGLZVCf+EDFkZ+BFkedLFxUGWB/fL4K4w==",
       "type": "package",
-      "path": "pipelines.sockets.unofficial/0.2.1-alpha.68",
+      "path": "pipelines.sockets.unofficial/0.2.1-alpha.77",
       "files": [
         "lib/netcoreapp2.1/Pipelines.Sockets.Unofficial.dll",
         "lib/netcoreapp2.1/Pipelines.Sockets.Unofficial.xml",
         "lib/netstandard2.0/Pipelines.Sockets.Unofficial.dll",
         "lib/netstandard2.0/Pipelines.Sockets.Unofficial.xml",
-        "pipelines.sockets.unofficial.0.2.1-alpha.68.nupkg.sha512",
+        "pipelines.sockets.unofficial.0.2.1-alpha.77.nupkg.sha512",
         "pipelines.sockets.unofficial.nuspec"
       ]
     },
@@ -3863,26 +3922,6 @@
         "servicestack.ormlite.nuspec"
       ]
     },
-    "ServiceStack.Redis/3.9.71": {
-      "sha512": "+JR9xUX5Ksp5Wnd1x0EZ9O2V3f7dOiT8waQGIi0NHWUH1NVaR1js3Gl37xZHC5lqCqBwyDSsqpKRknPfMTxKtQ==",
-      "type": "package",
-      "path": "servicestack.redis/3.9.71",
-      "files": [
-        "lib/net35/ServiceStack.Redis.XML",
-        "lib/net35/ServiceStack.Redis.dll",
-        "servicestack.redis.3.9.71.nupkg.sha512",
-        "servicestack.redis.nuspec"
-      ]
-    },
-    "ServiceStack.Redis.v3/1.0.3": {
-      "sha512": "UmrVE/k03IgtDcyx1E3qBD53DtsgZMBx7TRBbRdgWPaewMaAmGlL7mWqSqUdvhsvPinRUZmjWWYNtNn93mlLWw==",
-      "type": "package",
-      "path": "servicestack.redis.v3/1.0.3",
-      "files": [
-        "servicestack.redis.v3.1.0.3.nupkg.sha512",
-        "servicestack.redis.v3.nuspec"
-      ]
-    },
     "ServiceStack.Text/5.1.0": {
       "sha512": "4Zcv/RjXxflsPGPkOR1MaUp+nSgVAbRWliWg7kOMcsGood+NT9pAgWTA9lZeABBt/YP0nVttQWfkVebv7s40hQ==",
       "type": "package",
@@ -3897,14 +3936,14 @@
         "servicestack.text.nuspec"
       ]
     },
-    "StackExchange.Redis/2.0.0-alpha.206": {
-      "sha512": "XC6sJdwth6fEVIUSdDnlIyOZ9Tgl4eRH8T1sg5rdGO/fES/42kuXNYtyXkBZUu6b5etFh0ep8UYYsHOWetI+cQ==",
+    "StackExchange.Redis/2.0.0-alpha.281": {
+      "sha512": "/W39E+IqJaLBGLaHu2DjHYbaA1PpCOinAH9MIJSELgWUxb+DSrkBnhD8AWb81i7PAL+D0/y3qN8d9PHcMrGDGQ==",
       "type": "package",
-      "path": "stackexchange.redis/2.0.0-alpha.206",
+      "path": "stackexchange.redis/2.0.0-alpha.281",
       "files": [
         "lib/netstandard2.0/StackExchange.Redis.dll",
         "lib/netstandard2.0/StackExchange.Redis.xml",
-        "stackexchange.redis.2.0.0-alpha.206.nupkg.sha512",
+        "stackexchange.redis.2.0.0-alpha.281.nupkg.sha512",
         "stackexchange.redis.nuspec"
       ]
     },
@@ -8247,11 +8286,11 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.NETCore.App >= 2.0.0",
+      "NServiceKit.Redis >= 1.0.20",
       "Newtonsoft.Json >= 11.0.2",
       "ServiceStack >= 5.1.0",
       "ServiceStack.OrmLite >= 5.1.0",
-      "ServiceStack.Redis.v3 >= 1.0.3",
-      "StackExchange.Redis >= 2.0.0-alpha.206",
+      "StackExchange.Redis >= 2.0.0-alpha.281",
       "mongocsharpdriver >= 2.7.0",
       "nunit.framework >= 2.63.0"
     ]
@@ -8263,11 +8302,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\C\\github\\Tools\\Csharp\\Csharp.csproj",
+      "projectUniqueName": "D:\\C\\github\\Tools\\Csharp\\Csharp.csproj",
       "projectName": "Csharp",
-      "projectPath": "d:\\C\\github\\Tools\\Csharp\\Csharp.csproj",
+      "projectPath": "D:\\C\\github\\Tools\\Csharp\\Csharp.csproj",
       "packagesPath": "C:\\Users\\halyhuang\\.nuget\\packages\\",
-      "outputPath": "d:\\C\\github\\Tools\\Csharp\\obj\\",
+      "outputPath": "D:\\C\\github\\Tools\\Csharp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -8300,6 +8339,10 @@
             "version": "[2.0.0, )",
             "autoReferenced": true
           },
+          "NServiceKit.Redis": {
+            "target": "Package",
+            "version": "[1.0.20, )"
+          },
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[11.0.2, )"
@@ -8312,13 +8355,9 @@
             "target": "Package",
             "version": "[5.1.0, )"
           },
-          "ServiceStack.Redis.v3": {
-            "target": "Package",
-            "version": "[1.0.3, )"
-          },
           "StackExchange.Redis": {
             "target": "Package",
-            "version": "[2.0.0-alpha.206, )"
+            "version": "[2.0.0-alpha.281, )"
           },
           "mongocsharpdriver": {
             "target": "Package",
@@ -8342,18 +8381,38 @@
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "ServiceStack.Redis 3.9.71 depends on ServiceStack.Common (>= 3.0.0 && < 4.0.0) but ServiceStack.Common 3.0.0 was not found. An approximate best match of ServiceStack.Common 3.0.6 was resolved.",
-      "libraryId": "ServiceStack.Common",
+      "message": "NServiceKit.Redis 1.0.20 depends on NServiceKit.Text (>= 1.0.0 && < 2.0.0) but NServiceKit.Text 1.0.0 was not found. An approximate best match of NServiceKit.Text 1.0.10 was resolved.",
+      "libraryId": "NServiceKit.Text",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.0"
       ]
     },
     {
-      "code": "NU1602",
+      "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "ServiceStack.Common 3.0.6 does not provide an inclusive lower bound for dependency ServiceStack.Text. An approximate best match of ServiceStack.Text 2.9.0 was resolved.",
-      "libraryId": "ServiceStack.Text",
+      "message": "Package 'NServiceKit.Common 1.0.31' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "NServiceKit.Common",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'NServiceKit.Redis 1.0.20' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "NServiceKit.Redis",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'NServiceKit.Text 1.0.10' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "NServiceKit.Text",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.0"
       ]
@@ -8364,25 +8423,6 @@
       "warningLevel": 1,
       "message": "Package 'nunit.framework 2.63.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
       "libraryId": "nunit.framework",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'ServiceStack.Redis 3.9.71' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
-      "libraryId": "ServiceStack.Redis",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.0"
-      ]
-    },
-    {
-      "code": "NU1107",
-      "level": "Error",
-      "message": "Version conflict detected for ServiceStack.Common. Reference the package directly from the project to resolve this issue. \r\n Csharp -> ServiceStack.OrmLite 5.1.0 -> ServiceStack.Common (>= 5.1.0) \r\n Csharp -> ServiceStack.Redis.v3 1.0.3 -> ServiceStack.Redis 3.9.71 -> ServiceStack.Common (>= 3.0.0 && < 4.0.0).",
-      "libraryId": "ServiceStack.Common",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.0"
       ]
