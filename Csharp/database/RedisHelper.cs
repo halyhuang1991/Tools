@@ -1,10 +1,14 @@
+using Newtonsoft.Json;
 using NServiceKit.Redis;
 using System;
+using System.Collections.Generic;
+
 namespace Csharp.database
 {
     
     public class RedisHelper : IDisposable
         {
+            
         private RedisClient Redis = new RedisClient("127.0.0.1", 6379);
         //缓存池
         PooledRedisClientManager prcm = new PooledRedisClientManager();
@@ -104,6 +108,59 @@ namespace Csharp.database
         public bool Remove(string key)
         {
             return Redis.Remove(key);
+        }
+        public bool exists(string key)
+        {
+            return Redis.ContainsKey(key);
+        }
+        public bool SetHash<T>(string hash,string key,T body)where T:class{
+            this.Redis.SetEntryInHash(hash, key, JsonConvert.SerializeObject(body));
+            return true;
+        }
+        public List<string> GetHash(string hash){
+            return this.Redis.GetHashValues(hash);
+        }
+        public bool SetList<T>(string key,T body)where T:class{
+            this.Redis.AddItemToList(key, JsonConvert.SerializeObject(body));
+            return true;
+        }
+         public List<string> GetList(string key){
+            return this.Redis.GetAllItemsFromList(key);
+        }
+        public bool SetQueue<T>(string key,T body)where T:class{
+            this.Redis.EnqueueItemOnList(key, JsonConvert.SerializeObject(body));
+            return true;
+        }
+         public bool DeQueue(string key){
+            while (this.Redis.GetListCount(key) > 0)
+            {
+                Console.WriteLine(this.Redis.DequeueItemFromList(key));
+            }
+            return true;
+        }
+         public bool transation(string key,string value){
+             Action act=()=>{
+                this.Redis.Set<string>(key,value);
+             };
+            var tran=this.Redis.CreateTransaction();
+            tran.CompleteVoidQueuedCommand(act);
+            bool committed = tran.Commit();
+            return committed;
+        }
+        public void Subscribe(string key,string value){
+            
+            var sub1=this.Redis.CreateSubscription();
+            sub1.OnMessage = (chanel, message) =>{
+                           Console.WriteLine("chanel is :{0}", chanel);
+                           Console.WriteLine("message is :{0}", message);
+                     };
+            sub1.SubscribeToChannels(new string[] { "msg" });
+            
+        }
+        
+        public bool Publish(){
+           this.Redis.PublishMessage("msg","ok121");
+           return true;
         }
         #endregion
         //释放资源

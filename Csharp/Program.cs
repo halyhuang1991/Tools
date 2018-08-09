@@ -9,7 +9,7 @@ namespace Csharp
     {
         static void Main(string[] args)
         {
-            
+            ssredisGo();
             Console.WriteLine("Hello World!");
             //Console.ReadKey();
         }
@@ -37,6 +37,7 @@ namespace Csharp
          private static void ssredisGo(){
             var ssredis=new RedisHelper();
             ssredis.Set<string>("NServiceKit","ok");
+            ssredis.Subscribe("sds","sd");
          }
         private static  void MongoDbGo(){
             MongoFileBll tl = new MongoFileBll("mongodb://127.0.0.1:27017/MongoDB");
