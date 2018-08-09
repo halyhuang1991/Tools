@@ -12,7 +12,7 @@
             "preLaunchTask": "build",
             "program": "${workspaceRoot}/bin/Debug/<target-framework>/<project-name.dll>",
             "args": [],
-            "cwd": "${workspaceRoot}",
+            "cwd": "${workspaceRoot}/Csharp",
             "stopAtEntry": false,
             "console": "internalConsole",
             "pipeTransport": {
