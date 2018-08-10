@@ -9,7 +9,7 @@ namespace Csharp
     {
         static void Main(string[] args)
         {
-            ssredisGo();
+           
             Console.WriteLine("Hello World!");
             //Console.ReadKey();
         }
