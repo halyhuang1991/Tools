@@ -1,0 +1,26 @@
+dotnet add package Microsoft.EntityFrameworkCore
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet add package Microsoft.EntityFrameworkCore.Tools
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer.Design
+
+dotnet add package MySql.Data.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.Tools.DotNet
+
+dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite 
+
+
+dotnet ef migrations add test
+dotnet ef database update
+
+dotnet ef dbcontext scaffold "Server=localhost;User Id=root;Password=a12345;Database=test" "Pomelo.EntityFrameworkCore.MySql"  -o Models
+---生成表模型
+ Scaffold-DbContext  "Data Source=.;Initial Catalog=EFCore_dbfirst;User ID=sa;Password=sa.123" 
+ Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+Scaffold-DbContext "server=localhost;port=3306;user=root;password=mypass;database=sakila" 
+MySql.Data.EntityFrameworkCore -OutputDir sakila -f
+
+ vs 工具=》nuget=》nuget console    
+ // Install-Package  Find-Package   Uninstall-Package  Update-Package

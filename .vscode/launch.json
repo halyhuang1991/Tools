@@ -10,13 +10,13 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceRoot}/bin/Debug/<target-framework>/<project-name.dll>",
+            "program": "${workspaceRoot}/Csharp/bin/Debug/<target-framework>/<project-name.dll>",
             "args": [],
             "cwd": "${workspaceRoot}/Csharp",
             "stopAtEntry": false,
             "console": "internalConsole",
             "pipeTransport": {
-                "pipeCwd": "${workspaceRoot}",
+                "pipeCwd": "${workspaceRoot}/Csharp",
                 "pipeProgram": "enter the fully qualified path for the pipe program name, for example '/usr/bin/ssh'",
                 "pipeArgs": [],
                 "debuggerPath": "enter the path for the debugger on the target machine, for example ~/vsdbg/vsdbg"
