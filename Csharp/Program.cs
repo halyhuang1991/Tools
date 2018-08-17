@@ -10,7 +10,7 @@ namespace Csharp
         static void Main(string[] args)
         {
             
-            EF.EF_MSSQL.run();
+            EF.Mysql.run();
             Console.WriteLine("Hello World!");
             //Console.ReadKey();
         }
