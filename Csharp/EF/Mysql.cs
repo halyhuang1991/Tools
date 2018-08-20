@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Csharp.Models;
 using Microsoft.EntityFrameworkCore;
 using MySql.Data.EntityFrameworkCore;
-using MySql.Data.EntityFrameworkCore.Extensions;
+// using MySql.Data.EntityFrameworkCore.Extensions;
 using MySql.Data.MySqlClient;
 
 namespace Csharp.EF
@@ -14,6 +14,7 @@ namespace Csharp.EF
          public static void run(){
             try
             {
+                //net core2 的mysql引用有问题
                 // var db = new RemarkContext();
                 // db.remark.Add(new remark { id = 56, name = "efbook" });
                 // var count = db.SaveChanges();
