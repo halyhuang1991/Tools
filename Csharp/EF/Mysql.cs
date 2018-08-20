@@ -4,9 +4,8 @@ using System.Threading.Tasks;
 using Csharp.Models;
 using Microsoft.EntityFrameworkCore;
 using MySql.Data.EntityFrameworkCore;
-// using MySql.Data.EntityFrameworkCore.Extensions;
+//using MySql.Data.EntityFrameworkCore.Extensions;
 using MySql.Data.MySqlClient;
-
 namespace Csharp.EF
 {
     public class Mysql
