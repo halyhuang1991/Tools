@@ -1,0 +1,10 @@
+npm install --save-dev @types/jquery
+npm install jquery --save
+
+npm install typings -g
+
+
+typings install dt~jquery --global --save
+
+npm install jquery@3.2.1 --save-dev
+npm install jsdom --save-dev
