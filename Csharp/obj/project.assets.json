@@ -9507,11 +9507,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C\\github\\Tools\\Csharp\\Csharp.csproj",
+      "projectUniqueName": "d:\\C\\github\\Tools\\Csharp\\Csharp.csproj",
       "projectName": "Csharp",
-      "projectPath": "D:\\C\\github\\Tools\\Csharp\\Csharp.csproj",
+      "projectPath": "d:\\C\\github\\Tools\\Csharp\\Csharp.csproj",
       "packagesPath": "C:\\Users\\halyhuang\\.nuget\\packages\\",
-      "outputPath": "D:\\C\\github\\Tools\\Csharp\\obj\\",
+      "outputPath": "d:\\C\\github\\Tools\\Csharp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
