@@ -5,6 +5,7 @@ namespace Csharp.Mess
     public class args
     {
         public delegate void run(string message);
+         public event run t;
         public void echo(string name)
         {
              Console.WriteLine(name);
@@ -22,6 +23,11 @@ namespace Csharp.Mess
             args a=new args();
             run r=new run(a.echo);
             r("ok");
+
+            //------------
+            a.t=a.echo;
+            a.t+=a.echo;
+            a.t.Invoke("hello");
 
         }
     }
