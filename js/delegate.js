@@ -30,7 +30,7 @@ function a(name){
     var element = document.querySelector(name);
     return new BaseObject(element);
 }
-BaseObject.prototype.delegate=function(eventType, selector, fn){
+BaseObject.prototype.delegate=function(selector,eventType, fn){
     function run(ev){
         var target = ev.target || ev.srcElement;
         //console.log(target);
@@ -41,7 +41,7 @@ BaseObject.prototype.delegate=function(eventType, selector, fn){
                 fn.call(currentTarget,target);
                 console.log('---target--- ');
                 console.log(target);
-                console.log('click~');
+                console.log(eventType);
                 break;
             }
             target = target.parentNode;
@@ -54,6 +54,6 @@ BaseObject.prototype.delegate=function(eventType, selector, fn){
         this.element.attach(this.event[eventType],run.bind(this));
     }
 }
-a('#maincontent').delegate('click', 'pre', function (e) { 
+a('#maincontent').delegate('pre','click', function (e) { 
     console.log(e); console.log('ok') 
 })
