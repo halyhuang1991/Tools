@@ -4,7 +4,7 @@ def consumer():
     r = ''
     while True:
         n = yield r
-        if not n:
+        if not n:#没有send什么都不做
             return
         print('[CONSUMER] Consuming %s...' % n)
         time.sleep(1)
@@ -16,7 +16,7 @@ def produce(c):
     while n < 5:
         n = n + 1
         print('[PRODUCER] Producing %s...' % n)
-        r = c.send(n)
+        r = c.send(n)#next 并传值给yield
         print('[PRODUCER] Consumer return: %s' % r)
     c.close()
 
