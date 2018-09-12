@@ -9,7 +9,6 @@ namespace Csharp
     {
         static void Main(string[] args)
         {
-            Mess.yeild.run();
             Console.WriteLine("Hello World!");
             //Console.ReadKey();
         }

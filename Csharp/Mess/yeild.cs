@@ -4,7 +4,7 @@ using System.Collections;
 namespace Csharp.Mess
 {
     
-    public class yeild
+    public class yeild1
     {
         public static IEnumerable Power(int number, int exponent)
         {
