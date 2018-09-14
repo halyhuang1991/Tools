@@ -8,7 +8,6 @@ text=f.read()
 arr=re.findall(r'[^()]+',text)
 arr=list(set(arr))
 arr=list(filter(is_contains,arr))
-print(len(arr))
 arr=arr[0].split(',')
 pms=''
 args=''
