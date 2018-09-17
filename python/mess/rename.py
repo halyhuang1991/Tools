@@ -16,3 +16,18 @@ for filename in files:
     else:
         newname = portion[0]
         
+from glob import glob
+fs=glob(path+"\*.flv")
+dic={}
+for f in fs:
+    list1=[]
+    size=os.path.getsize(f)
+    if dic.__contains__(size):
+        dic[size].append(f)
+    else:
+        list1.append(f)
+        dic[size]=list1
+for d in dic:
+    arr=list(dic[d])
+    for i in range(1,len(arr)):
+        print(dic[d][i])
