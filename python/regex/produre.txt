@@ -1,5 +1,4 @@
-  lot_edi_module.lot_edi_releasepo_size(v_cstref => :v_cstref,
+  lot_edi_module.lot_edi_releasepo_clot(v_clot => :v_clot,
                                         v_user => :v_user,
-                                        p_parm => p_parm,
                                         outfname => :outfname,
-                                        err_msg => :err_msg)
+                                        err_msg => :err_msg);
