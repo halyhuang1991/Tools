@@ -1,6 +1,11 @@
 import os
 import datetime
 from glob import glob
+def is_Chinese(word):
+    for ch in word:
+        if '\u4e00' <= ch <= '\u9fff':
+            return True
+    return False
 #保留多个同样大小的一个
 def removeRepeat(path,extends):
     fs=glob(path+"\\*."+extends)
@@ -26,6 +31,8 @@ i=0
 for filename in files:
     portion = os.path.splitext(filename)
     if portion[0].find('-')>0:
+        continue
+    if is_Chinese(portion[0]):
         continue
     if portion[1] ==".mp4":
         newname = datetime.datetime.now().strftime('%Y%m%d')+"-"+portion[0]+".mp4"
