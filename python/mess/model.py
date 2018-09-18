@@ -10,6 +10,7 @@ com.comments="ok"
 #class to dict
 dic=com.__dict__
 print(dic)
+print(com.commentLen==None)
 if 'comments' in dic:
     print("ok")
 # two
