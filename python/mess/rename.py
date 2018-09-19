@@ -46,7 +46,7 @@ for filename in files:
         i+=1
     else:
         newname = portion[0]
-print(i)
+print(i-1)
 
     
 
