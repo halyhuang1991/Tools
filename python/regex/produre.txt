@@ -1,4 +1,7 @@
-  lot_edi_module.lot_edi_releasepo_clot(v_clot => :v_clot,
-                                        v_user => :v_user,
-                                        outfname => :outfname,
-                                        err_msg => :err_msg);
+to_char(N.DTE53Z,'yyyy-mm-dd hh24:mi:ss')DTE53Z,N.INCDEC,N.TRPF,N.OPQ,N.FSTORD,N.OPQ_1
+,(SELECT DA.EKEY FROM DA WHERE DA.CSTORD=N.FSTORD) FEKEY,(SELECT A.CLOTDS FROM A WHERE A.CSTORD=N.FSTORD) FCLOTDS
+,DECODE(SUBSTR(N.CSTORD,0,1),'F','',N.CSTORD) CSTORD1
+,(SELECT A.CLOT FROM A WHERE A.CSTORD=N.FSTORD)FCLOT
+,(SELECT DA.EKEY FROM DA WHERE DA.CSTORD=N.CSTORD)CEKEY,(SELECT A.CLOTDS FROM A WHERE A.CSTORD=N.CSTORD) CCLOTDS
+,DECODE(SUBSTR(N.CSTORD,0,1),'F',N.CSTORD,'') CSTORD2
+,(SELECT A.CLOT FROM A WHERE A.CSTORD=N.CSTORD)CCLOT,N.DTE53Z DTE53Z1
