@@ -849,6 +849,27 @@
           "lib/netstandard1.6/MySql.Data.EntityFrameworkCore.dll": {}
         }
       },
+      "Nancy/2.0.0-alpha": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Nancy.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Nancy.dll": {}
+        }
+      },
+      "Nancy.Hosting.Self/2.0.0-alpha": {
+        "type": "package",
+        "dependencies": {
+          "Nancy": "2.0.0-alpha"
+        },
+        "compile": {
+          "lib/net45/Nancy.Hosting.Self.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Nancy.Hosting.Self.dll": {}
+        }
+      },
       "NETStandard.Library/2.0.0": {
         "type": "package",
         "dependencies": {
@@ -4166,6 +4187,28 @@
         "lib/netstandard1.6/MySql.Data.EntityFrameworkCore.xml",
         "mysql.data.entityframeworkcore.8.0.9-dmr.nupkg.sha512",
         "mysql.data.entityframeworkcore.nuspec"
+      ]
+    },
+    "Nancy/2.0.0-alpha": {
+      "sha512": "tyhPxxsXtH5qlAj+EbytDuBam/sFs39qrgVDLEiirLblBfmPPGes6fhwrsfGmFGzwDv4yjREPiK7X4tPxYWgYg==",
+      "type": "package",
+      "path": "nancy/2.0.0-alpha",
+      "files": [
+        "lib/net45/Nancy.dll",
+        "lib/net45/Nancy.xml",
+        "nancy.2.0.0-alpha.nupkg.sha512",
+        "nancy.nuspec"
+      ]
+    },
+    "Nancy.Hosting.Self/2.0.0-alpha": {
+      "sha512": "H1hglcWLLOdT1uCUTzUoxXystEX57p19RqVFYtqXqX6ui+YKkLcPfJ7PaOlnaulW4vqc/cGwJIQMFjyOb7mhwg==",
+      "type": "package",
+      "path": "nancy.hosting.self/2.0.0-alpha",
+      "files": [
+        "lib/net45/Nancy.Hosting.Self.XML",
+        "lib/net45/Nancy.Hosting.Self.dll",
+        "nancy.hosting.self.2.0.0-alpha.nupkg.sha512",
+        "nancy.hosting.self.nuspec"
       ]
     },
     "NETStandard.Library/2.0.0": {
@@ -9492,6 +9535,8 @@
       "Microsoft.NETCore.App >= 2.0.0",
       "MySql.Data.EntityFrameworkCore >= 8.0.9-dmr",
       "NServiceKit.Redis >= 1.0.20",
+      "Nancy >= 2.0.0-alpha",
+      "Nancy.Hosting.Self >= 2.0.0-alpha",
       "Newtonsoft.Json >= 11.0.2",
       "ServiceStack >= 5.1.0",
       "ServiceStack.OrmLite >= 5.1.0",
@@ -9576,6 +9621,14 @@
             "target": "Package",
             "version": "[1.0.20, )"
           },
+          "Nancy": {
+            "target": "Package",
+            "version": "[2.0.0-alpha, )"
+          },
+          "Nancy.Hosting.Self": {
+            "target": "Package",
+            "version": "[2.0.0-alpha, )"
+          },
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[11.0.2, )"
@@ -9616,6 +9669,26 @@
       "warningLevel": 1,
       "message": "NServiceKit.Redis 1.0.20 depends on NServiceKit.Text (>= 1.0.0 && < 2.0.0) but NServiceKit.Text 1.0.0 was not found. An approximate best match of NServiceKit.Text 1.0.10 was resolved.",
       "libraryId": "NServiceKit.Text",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Nancy 2.0.0-alpha' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Nancy",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Nancy.Hosting.Self 2.0.0-alpha' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Nancy.Hosting.Self",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.0"
       ]

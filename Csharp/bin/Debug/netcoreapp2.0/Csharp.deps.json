@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "15ba1877fe77e32def56bf54823e8d23e16c71d2"
+    "signature": "c8a78352d536f4e443ef332d7424f18ed0117ca9"
   },
   "compilationOptions": {},
   "targets": {
@@ -16,6 +16,8 @@
           "Microsoft.EntityFrameworkCore.Tools.DotNet": "2.0.0",
           "MySql.Data.EntityFrameworkCore": "8.0.9-dmr",
           "NServiceKit.Redis": "1.0.20",
+          "Nancy": "2.0.0-alpha",
+          "Nancy.Hosting.Self": "2.0.0-alpha",
           "Newtonsoft.Json": "11.0.2",
           "ServiceStack": "5.1.0",
           "ServiceStack.OrmLite": "5.1.0",
@@ -478,6 +480,19 @@
         },
         "runtime": {
           "lib/netstandard1.6/MySql.Data.EntityFrameworkCore.dll": {}
+        }
+      },
+      "Nancy/2.0.0-alpha": {
+        "runtime": {
+          "lib/net45/Nancy.dll": {}
+        }
+      },
+      "Nancy.Hosting.Self/2.0.0-alpha": {
+        "dependencies": {
+          "Nancy": "2.0.0-alpha"
+        },
+        "runtime": {
+          "lib/net45/Nancy.Hosting.Self.dll": {}
         }
       },
       "Newtonsoft.Json/11.0.2": {
@@ -2398,6 +2413,20 @@
       "sha512": "sha512-k0pdHpYeHCtWgGy1MLg0FwcDUEyInFMjbQTY+fFLpMJZjV/jZJ7TNPtEF6QFGsVGbLINdMyPjHtVXsn/vLjgQw==",
       "path": "mysql.data.entityframeworkcore/8.0.9-dmr",
       "hashPath": "mysql.data.entityframeworkcore.8.0.9-dmr.nupkg.sha512"
+    },
+    "Nancy/2.0.0-alpha": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tyhPxxsXtH5qlAj+EbytDuBam/sFs39qrgVDLEiirLblBfmPPGes6fhwrsfGmFGzwDv4yjREPiK7X4tPxYWgYg==",
+      "path": "nancy/2.0.0-alpha",
+      "hashPath": "nancy.2.0.0-alpha.nupkg.sha512"
+    },
+    "Nancy.Hosting.Self/2.0.0-alpha": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-H1hglcWLLOdT1uCUTzUoxXystEX57p19RqVFYtqXqX6ui+YKkLcPfJ7PaOlnaulW4vqc/cGwJIQMFjyOb7mhwg==",
+      "path": "nancy.hosting.self/2.0.0-alpha",
+      "hashPath": "nancy.hosting.self.2.0.0-alpha.nupkg.sha512"
     },
     "Newtonsoft.Json/11.0.2": {
       "type": "package",
