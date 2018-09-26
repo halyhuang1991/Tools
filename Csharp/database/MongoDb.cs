@@ -33,8 +33,10 @@ namespace Csharp
                 // set.Credential=credential;
                 //Console.WriteLine(set.ToString());
                 MongoClient client = new MongoClient(set);
-                //  MongoServer server = client.GetServer();
+               // MongoServer server = client.GetServer();
                 this.repository = client.GetServer().GetDatabase(DatabaseName);
+               // MongoServer server =  new MongoServer(MongoServerSettings.FromClientSettings(client.Settings));
+                
 
             }catch(Exception ex){
                 Console.WriteLine(ex.Message);
