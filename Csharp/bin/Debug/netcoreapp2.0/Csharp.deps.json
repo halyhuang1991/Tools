@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "c8a78352d536f4e443ef332d7424f18ed0117ca9"
+    "signature": "1ef932f3271d2a737301abd36809b67afa2528c9"
   },
   "compilationOptions": {},
   "targets": {
@@ -14,10 +14,13 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "2.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "2.0.0",
           "Microsoft.EntityFrameworkCore.Tools.DotNet": "2.0.0",
+          "Microsoft.Owin.Host.HttpListener": "4.0.0",
+          "Microsoft.Owin.Hosting": "4.0.0",
           "MySql.Data.EntityFrameworkCore": "8.0.9-dmr",
           "NServiceKit.Redis": "1.0.20",
           "Nancy": "2.0.0-alpha",
           "Nancy.Hosting.Self": "2.0.0-alpha",
+          "Nancy.Owin": "1.4.1",
           "Newtonsoft.Json": "11.0.2",
           "ServiceStack": "5.1.0",
           "ServiceStack.OrmLite": "5.1.0",
@@ -357,6 +360,28 @@
         }
       },
       "Microsoft.NETCore.Targets/1.1.0": {},
+      "Microsoft.Owin/4.0.0": {
+        "dependencies": {
+          "Owin": "1.0.0"
+        },
+        "runtime": {
+          "lib/net451/Microsoft.Owin.dll": {}
+        }
+      },
+      "Microsoft.Owin.Host.HttpListener/4.0.0": {
+        "runtime": {
+          "lib/net451/Microsoft.Owin.Host.HttpListener.dll": {}
+        }
+      },
+      "Microsoft.Owin.Hosting/4.0.0": {
+        "dependencies": {
+          "Microsoft.Owin": "4.0.0",
+          "Owin": "1.0.0"
+        },
+        "runtime": {
+          "lib/net451/Microsoft.Owin.Hosting.dll": {}
+        }
+      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Targets": "1.1.0",
@@ -495,6 +520,15 @@
           "lib/net45/Nancy.Hosting.Self.dll": {}
         }
       },
+      "Nancy.Owin/1.4.1": {
+        "dependencies": {
+          "Nancy": "2.0.0-alpha",
+          "Owin": "1.0.0"
+        },
+        "runtime": {
+          "lib/net40/Nancy.Owin.dll": {}
+        }
+      },
       "Newtonsoft.Json/11.0.2": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -526,6 +560,11 @@
       "nunit.framework/2.63.0": {
         "runtime": {
           "lib/nunit.framework.dll": {}
+        }
+      },
+      "Owin/1.0.0": {
+        "runtime": {
+          "lib/net40/Owin.dll": {}
         }
       },
       "Pipelines.Sockets.Unofficial/0.2.1-alpha.77": {
@@ -2358,6 +2397,27 @@
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
     },
+    "Microsoft.Owin/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3TNVMkgF+yhesPYwq67ZOcLGtfKEupNNXcqVO4FRNjkQ1v0gBNb3k8CSuJonrCC8EAUp+OeUYrDTQePiyaVzpw==",
+      "path": "microsoft.owin/4.0.0",
+      "hashPath": "microsoft.owin.4.0.0.nupkg.sha512"
+    },
+    "Microsoft.Owin.Host.HttpListener/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AC0fcRPFg/gf6AmATmCJBGnD14URhCYOHtAW0g248YzZ4ByIkVA7jHBQbfij+zyIOeOya8uaAwFPCIN1wyiOQw==",
+      "path": "microsoft.owin.host.httplistener/4.0.0",
+      "hashPath": "microsoft.owin.host.httplistener.4.0.0.nupkg.sha512"
+    },
+    "Microsoft.Owin.Hosting/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rAkxeyiIliRbMZyPxo83QE+UY7HNTsFOH9+wqQTcQyWBVbYkBQp373meNt4+DpupMB56A1BopLDeyoX9DZJrbA==",
+      "path": "microsoft.owin.hosting/4.0.0",
+      "hashPath": "microsoft.owin.hosting.4.0.0.nupkg.sha512"
+    },
     "Microsoft.Win32.Primitives/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -2428,6 +2488,13 @@
       "path": "nancy.hosting.self/2.0.0-alpha",
       "hashPath": "nancy.hosting.self.2.0.0-alpha.nupkg.sha512"
     },
+    "Nancy.Owin/1.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MQ080omNirThxP5XcHkzx6XIgoZvnHSKxIK1z6jFtXje6p2JjbWszv0AKZQXqnrrJJiAFc4KjIT2PX4KS3LtHw==",
+      "path": "nancy.owin/1.4.1",
+      "hashPath": "nancy.owin.1.4.1.nupkg.sha512"
+    },
     "Newtonsoft.Json/11.0.2": {
       "type": "package",
       "serviceable": true,
@@ -2462,6 +2529,13 @@
       "sha512": "sha512-XEZ2A2z0ynUOAKC3cCIZ5D4UZtWflL3N4XFsjPiTZNWD9QKuMdfjBESjmUPgryBcGvbcy11oLR7O7J2f3Rmfjw==",
       "path": "nunit.framework/2.63.0",
       "hashPath": "nunit.framework.2.63.0.nupkg.sha512"
+    },
+    "Owin/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OseTFniKmyp76mEzOBwIKGBRS5eMoYNkMKaMXOpxx9jv88+b6mh1rSaw43vjBOItNhaLFG3d0a20PfHyibH5sw==",
+      "path": "owin/1.0.0",
+      "hashPath": "owin.1.0.0.nupkg.sha512"
     },
     "Pipelines.Sockets.Unofficial/0.2.1-alpha.77": {
       "type": "package",

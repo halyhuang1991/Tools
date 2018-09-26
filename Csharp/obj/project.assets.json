@@ -678,6 +678,40 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "Microsoft.Owin/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Owin": "1.0.0"
+        },
+        "compile": {
+          "lib/net451/Microsoft.Owin.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.Owin.dll": {}
+        }
+      },
+      "Microsoft.Owin.Host.HttpListener/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net451/Microsoft.Owin.Host.HttpListener.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.Owin.Host.HttpListener.dll": {}
+        }
+      },
+      "Microsoft.Owin.Hosting/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Owin": "4.0.0",
+          "Owin": "1.0.0"
+        },
+        "compile": {
+          "lib/net451/Microsoft.Owin.Hosting.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.Owin.Hosting.dll": {}
+        }
+      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -870,6 +904,19 @@
           "lib/net45/Nancy.Hosting.Self.dll": {}
         }
       },
+      "Nancy.Owin/1.4.1": {
+        "type": "package",
+        "dependencies": {
+          "Nancy": "1.4.1",
+          "OWIN": "1.0.0"
+        },
+        "compile": {
+          "lib/net40/Nancy.Owin.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Nancy.Owin.dll": {}
+        }
+      },
       "NETStandard.Library/2.0.0": {
         "type": "package",
         "dependencies": {
@@ -937,6 +984,15 @@
         },
         "runtime": {
           "lib/nunit.framework.dll": {}
+        }
+      },
+      "Owin/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Owin.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Owin.dll": {}
         }
       },
       "Pipelines.Sockets.Unofficial/0.2.1-alpha.77": {
@@ -3993,6 +4049,39 @@
         "runtime.json"
       ]
     },
+    "Microsoft.Owin/4.0.0": {
+      "sha512": "3TNVMkgF+yhesPYwq67ZOcLGtfKEupNNXcqVO4FRNjkQ1v0gBNb3k8CSuJonrCC8EAUp+OeUYrDTQePiyaVzpw==",
+      "type": "package",
+      "path": "microsoft.owin/4.0.0",
+      "files": [
+        "lib/net451/Microsoft.Owin.XML",
+        "lib/net451/Microsoft.Owin.dll",
+        "microsoft.owin.4.0.0.nupkg.sha512",
+        "microsoft.owin.nuspec"
+      ]
+    },
+    "Microsoft.Owin.Host.HttpListener/4.0.0": {
+      "sha512": "AC0fcRPFg/gf6AmATmCJBGnD14URhCYOHtAW0g248YzZ4ByIkVA7jHBQbfij+zyIOeOya8uaAwFPCIN1wyiOQw==",
+      "type": "package",
+      "path": "microsoft.owin.host.httplistener/4.0.0",
+      "files": [
+        "lib/net451/Microsoft.Owin.Host.HttpListener.dll",
+        "lib/net451/Microsoft.Owin.Host.HttpListener.xml",
+        "microsoft.owin.host.httplistener.4.0.0.nupkg.sha512",
+        "microsoft.owin.host.httplistener.nuspec"
+      ]
+    },
+    "Microsoft.Owin.Hosting/4.0.0": {
+      "sha512": "rAkxeyiIliRbMZyPxo83QE+UY7HNTsFOH9+wqQTcQyWBVbYkBQp373meNt4+DpupMB56A1BopLDeyoX9DZJrbA==",
+      "type": "package",
+      "path": "microsoft.owin.hosting/4.0.0",
+      "files": [
+        "lib/net451/Microsoft.Owin.Hosting.XML",
+        "lib/net451/Microsoft.Owin.Hosting.dll",
+        "microsoft.owin.hosting.4.0.0.nupkg.sha512",
+        "microsoft.owin.hosting.nuspec"
+      ]
+    },
     "Microsoft.Win32.Primitives/4.3.0": {
       "sha512": "9ZQKCWxH7Ijp9BfahvL2Zyf1cJIk8XYLF6Yjzr2yi0b2cOut/HQ31qf1ThHAgCc3WiZMdnWcfJCgN82/0UunxA==",
       "type": "package",
@@ -4211,6 +4300,17 @@
         "nancy.hosting.self.nuspec"
       ]
     },
+    "Nancy.Owin/1.4.1": {
+      "sha512": "MQ080omNirThxP5XcHkzx6XIgoZvnHSKxIK1z6jFtXje6p2JjbWszv0AKZQXqnrrJJiAFc4KjIT2PX4KS3LtHw==",
+      "type": "package",
+      "path": "nancy.owin/1.4.1",
+      "files": [
+        "lib/net40/Nancy.Owin.XML",
+        "lib/net40/Nancy.Owin.dll",
+        "nancy.owin.1.4.1.nupkg.sha512",
+        "nancy.owin.nuspec"
+      ]
+    },
     "NETStandard.Library/2.0.0": {
       "sha512": "7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==",
       "type": "package",
@@ -4417,6 +4517,16 @@
         "lib/nunit.framework.xml",
         "nunit.framework.2.63.0.nupkg.sha512",
         "nunit.framework.nuspec"
+      ]
+    },
+    "Owin/1.0.0": {
+      "sha512": "OseTFniKmyp76mEzOBwIKGBRS5eMoYNkMKaMXOpxx9jv88+b6mh1rSaw43vjBOItNhaLFG3d0a20PfHyibH5sw==",
+      "type": "package",
+      "path": "owin/1.0.0",
+      "files": [
+        "lib/net40/Owin.dll",
+        "owin.1.0.0.nupkg.sha512",
+        "owin.nuspec"
       ]
     },
     "Pipelines.Sockets.Unofficial/0.2.1-alpha.77": {
@@ -9533,10 +9643,13 @@
       "Microsoft.EntityFrameworkCore.Tools >= 2.0.0",
       "Microsoft.EntityFrameworkCore.Tools.DotNet >= 2.0.0",
       "Microsoft.NETCore.App >= 2.0.0",
+      "Microsoft.Owin.Host.HttpListener >= 4.0.0",
+      "Microsoft.Owin.Hosting >= 4.0.0",
       "MySql.Data.EntityFrameworkCore >= 8.0.9-dmr",
       "NServiceKit.Redis >= 1.0.20",
       "Nancy >= 2.0.0-alpha",
       "Nancy.Hosting.Self >= 2.0.0-alpha",
+      "Nancy.Owin >= 1.4.1",
       "Newtonsoft.Json >= 11.0.2",
       "ServiceStack >= 5.1.0",
       "ServiceStack.OrmLite >= 5.1.0",
@@ -9613,6 +9726,14 @@
             "version": "[2.0.0, )",
             "autoReferenced": true
           },
+          "Microsoft.Owin.Host.HttpListener": {
+            "target": "Package",
+            "version": "[4.0.0, )"
+          },
+          "Microsoft.Owin.Hosting": {
+            "target": "Package",
+            "version": "[4.0.0, )"
+          },
           "MySql.Data.EntityFrameworkCore": {
             "target": "Package",
             "version": "[8.0.9-dmr, )"
@@ -9628,6 +9749,10 @@
           "Nancy.Hosting.Self": {
             "target": "Package",
             "version": "[2.0.0-alpha, )"
+          },
+          "Nancy.Owin": {
+            "target": "Package",
+            "version": "[1.4.1, )"
           },
           "Newtonsoft.Json": {
             "target": "Package",
@@ -9677,6 +9802,36 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
+      "message": "Package 'Microsoft.Owin 4.0.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Owin",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Owin.Host.HttpListener 4.0.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Owin.Host.HttpListener",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Owin.Hosting 4.0.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Owin.Hosting",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
       "message": "Package 'Nancy 2.0.0-alpha' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
       "libraryId": "Nancy",
       "targetGraphs": [
@@ -9689,6 +9844,16 @@
       "warningLevel": 1,
       "message": "Package 'Nancy.Hosting.Self 2.0.0-alpha' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
       "libraryId": "Nancy.Hosting.Self",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Nancy.Owin 1.4.1' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Nancy.Owin",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.0"
       ]
@@ -9729,6 +9894,16 @@
       "warningLevel": 1,
       "message": "Package 'nunit.framework 2.63.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
       "libraryId": "nunit.framework",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Owin 1.0.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Owin",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.0"
       ]
