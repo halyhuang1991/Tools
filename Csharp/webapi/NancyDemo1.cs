@@ -68,6 +68,7 @@ namespace Csharp.webapi
        }
        public async Task<dynamic> GetString()
         {
+            Request.Session["ok"]="ok";//数据要少于2k
             return await Task.FromResult("Hello");
         }
    }
