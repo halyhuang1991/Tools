@@ -45,6 +45,7 @@ namespace Csharp.Mess
                 //直接调用
                 MethodInfo method = t.GetMethod("test2");
                 method.Invoke(obj, paras);
+                //method.Invoke(any, paras);//异常：必须实例化反射要反射的类，因为要使用的方法并不是静态方法
                 #endregion
 
                 #region 方法二
