@@ -9,6 +9,9 @@ namespace Csharp
     {
         static void Main(string[] args)
         {
+            Mess.Attrb.log("test");
+            var t=new Mess.Attrb();
+            t.Test();
             Console.WriteLine("\r\nHello World!");
             //Console.ReadKey();
         }
