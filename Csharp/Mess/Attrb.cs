@@ -51,7 +51,7 @@ sealed class MyAttribute : System.Attribute
             PropertyInfo property =typeof(Attrb).GetProperty("CSTORD");
             Attribute[] ab=Attribute.GetCustomAttributes(property);
              MyAttribute ma1=ab[0] as MyAttribute;
-            Console.WriteLine(ma1.PositionalString);
+            Console.WriteLine("Attribute.GetCustomAttributes----"+ma1.PositionalString);
             //------------------------------
             Attrb atb=new Attrb();
             PropertyInfo pInstance = typeof(Attrb).GetProperty("CSTORD");
