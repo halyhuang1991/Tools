@@ -11,11 +11,13 @@ arr=list(filter(is_contains,arr))
 arr=arr[0].split(',')
 pms=''
 args=''
+modelargs=''
 i=0
 for str1 in arr:
     key=str1.split('=>')[0].strip()
     if str1.find(':')>0:
         args+=('' if args=='' else ',')+'string '+key
+        modelargs+=('' if modelargs=='' else ',')+'model.'+str(key).upper().replace('V_','')
         len1=""
         if key in ["outfname","err_msg"]:
             len1="Varchar2,500"
@@ -32,6 +34,7 @@ for str1 in arr:
             pms+='cmdParas[{0}].Value = {1};\n'.format(i,key)
     else:
         args+=('' if args=='' else ',')+'string[] '+key
+        modelargs+=('' if args=='' else ',')+'ls'
         pms+='cmdParas[{0}] = new OracleParameter("{1}", OracleDbType.Varchar2);\n'.format(i,key)
         pms+='cmdParas[{0}].CollectionType = OracleCollectionType.PLSQLAssociativeArray;\n'.format(i)
         pms+='cmdParas[{0}].Value = {1};\n'.format(i,key)
@@ -39,5 +42,6 @@ for str1 in arr:
 pms='OracleParameter[] cmdParas = new OracleParameter[{0}];\n'.format(i)+pms
 print(pms)
 print(args)
+print(modelargs)
         
         
