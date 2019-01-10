@@ -1,6 +1,5 @@
-cm_module.cm_cm_procombo(v_clot => :v_clot,
-                           v_cstord => :v_cstord,
-                           v_cscomd => :v_cscomd,
-                           v_jobid => :v_jobid,
+ basedata.qa_supplierinat(v_skey => :v_skey,
+                           v_inatflg => :v_inatflg,
+                           v_flg => :v_flg,
                            v_user => :v_user,
-                           err_msg => :err_msg);
+                           err_msg => :err_msg)

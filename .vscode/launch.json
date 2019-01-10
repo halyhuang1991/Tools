@@ -15,6 +15,16 @@
         "args": ""
     },
     {
+        "type": "java",
+        "name": "CodeLens (Launch) - test",
+        "request": "launch",
+        "cwd": "${workspaceFolder}",
+        "console": "internalConsole",
+        "stopOnEntry": false,
+        "mainClass": "test",
+        "args": ""
+    },
+    {
         "name": ".NET Core Launch (console)",
         "type": "coreclr",
         "request": "launch",

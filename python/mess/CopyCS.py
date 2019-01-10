@@ -28,9 +28,9 @@ def CopyRewrite(path,newname,dic,modelname):
     f.close()
     f_new.close()
     #os.rename(newpath,newpath.replace('3','34'))
-def WriteNew():
+def WriteNew(name):
     path=r"D:\NewWork\BEWeb\BENet\BE.Web\Handlers\Basdat\VATDataHandler.ashx"
-    CopyRewrite(path,'Price',{},'VAT')
+    CopyRewrite(path,name,{},'VAT')
     dic={}
     dic['ORFVATA']='ORFVATA'
     dic['VAC,VACD,VATTP']=''
@@ -39,7 +39,7 @@ def WriteNew():
     dic['VACD']='VACD'
     dic['VATTP']='VATTP'
     path=r"D:\NewWork\BEWeb\BENet\BE.Web\App_Code\Handlers\Basdat\VATDataHandler.ashx.cs"
-    CopyRewrite(path,'Price',dic,'VAT')
+    CopyRewrite(path,name,dic,'VAT')
     print('ok')
 def WriteNew1(name):
     if name=='':
@@ -56,7 +56,7 @@ def WriteNew1(name):
     path=r"D:\NewWork\BEWeb\BENet\BE.Web\App_Code\Handlers\Salord\SpecialOrderDataHandler.ashx.cs"
     CopyRewrite(path,name,dic,'SpecialOrder')
     print('ok')
-WriteNew1('CMLabDip')
+#WriteNew1('LotFurtherProcess')
 
 
 
