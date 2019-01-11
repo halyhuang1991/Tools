@@ -24,10 +24,10 @@ namespace Csharp.Mess
                     string[] leftstr = new string[5] { "like ", ",", "(", "=",">" };
                     foreach (string str in rightstr)
                     {
-                        ix = s.ToLower().IndexOf(str, index);
+                        ix = s.Trim().ToLower().IndexOf(str, index);
                         if (ix > 0)
                         {
-                            string val=s.Substring(index+1,ix-index-1);
+                            string val=s.Trim().Substring(index+1,ix-index-1);
                             if(val.Trim()==""){
                                  tr = false;//值右边的单引号
                                  break;
@@ -41,7 +41,7 @@ namespace Csharp.Mess
                         foreach (string str in leftstr)
                         {
 
-                            ip = s.ToLower().LastIndexOf(str, index);
+                            ip = s.Trim().ToLower().LastIndexOf(str, index);
                             if (ip > 0)
                             {
                                 if (str == "like ")
@@ -52,7 +52,7 @@ namespace Csharp.Mess
                                     tl = false;//值左边的单引号
                                     break;
                                 }
-                                string val = s.Substring(ip + 1, index - ip - 1);
+                                string val = s.Trim().Substring(ip + 1, index - ip - 1);
                                 if (val.Trim() == "")
                                 {
                                     tl = false;//值左边的单引号
