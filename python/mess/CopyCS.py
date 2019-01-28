@@ -16,9 +16,9 @@ def CopyRewrite(path,newname,dic,modelname):
         return
     if os.path.exists(newpath):
         return
-    f_new = open(newpath,'w',encoding='utf-8')
+    f_new = open(newpath,'w',-1,encoding='utf-8')
     f= open(path,'r',-1,'utf-8')
-    print(len(f.readlines()))
+    #print(len(f.readlines()))
     for line in f.readlines():
         line=line.replace(custombasename(path).split('.')[0],clsname)
         print(line)
@@ -56,7 +56,20 @@ def WriteNew1(name):
     path=r"D:\NewWork\BEWeb\BENet\BE.Web\App_Code\Handlers\Salord\SpecialOrderDataHandler.ashx.cs"
     CopyRewrite(path,name,dic,'SpecialOrder')
     print('ok')
-#WriteNew1('LotFurtherProcess')
+def WriteNew2(name):
+    if name=='':
+        return
+    path=r"D:\NewWork\BEWeb\BENet\BE.Web\Handlers\Purord\RMSHFDepartmentDataHandler.ashx"
+    CopyRewrite(path,name,{},'RMSHFDepartment')
+    dic={}
+    dic['TFFSHFF']='TFFSHFF'
+    dic['DEP03']='DEP03'
+    dic['DEPN1']=''
+    dic['Department,Department Name']=''
+    path=r"D:\NewWork\BEWeb\BENet\BE.Web\Handlers\Purord\RMSHFDepartmentDataHandler.ash.cs"
+    CopyRewrite(path,name,dic,'RMSHFDepartment')
+    print('ok')
+#WriteNew2('RMSHFDepartment')
 
 
 
