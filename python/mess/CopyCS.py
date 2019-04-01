@@ -21,7 +21,7 @@ def CopyRewrite(path,newname,dic,modelname):
     #print(len(f.readlines()))
     for line in f.readlines():
         line=line.replace(custombasename(path).split('.')[0],clsname)
-        print(line)
+        #print(line)
         for key in dic:
             line=line.replace(key,dic[key])
         f_new.write(line)
@@ -41,7 +41,7 @@ def WriteNew(name):
     path=r"D:\NewWork\BEWeb\BENet\BE.Web\App_Code\Handlers\Basdat\VATDataHandler.ashx.cs"
     CopyRewrite(path,name,dic,'VAT')
     print('ok')
-def WriteNew1(name):
+def WriteNewSO(name):
     if name=='':
         return
     path=r"D:\NewWork\BEWeb\BENet\BE.Web\Handlers\Salord\SpecialOrderDataHandler.ashx"
@@ -56,20 +56,21 @@ def WriteNew1(name):
     path=r"D:\NewWork\BEWeb\BENet\BE.Web\App_Code\Handlers\Salord\SpecialOrderDataHandler.ashx.cs"
     CopyRewrite(path,name,dic,'SpecialOrder')
     print('ok')
-def WriteNew2(name):
+def WriteNewPo(name):
     if name=='':
         return
     path=r"D:\NewWork\BEWeb\BENet\BE.Web\Handlers\Purord\RMSHFDepartmentDataHandler.ashx"
     CopyRewrite(path,name,{},'RMSHFDepartment')
     dic={}
-    dic['TFFSHFF']='TFFSHFF'
+    dic['TFFSHFF']='IMFORDA'
     dic['DEP03']='DEP03'
     dic['DEPN1']=''
     dic['Department,Department Name']=''
-    path=r"D:\NewWork\BEWeb\BENet\BE.Web\Handlers\Purord\RMSHFDepartmentDataHandler.ash.cs"
+    path=r"D:\NewWork\BEWeb\BENet\BE.Web\App_Code\Handlers\Purord\RMSHFDepartmentDataHandler.ashx.cs"
     CopyRewrite(path,name,dic,'RMSHFDepartment')
     print('ok')
-#WriteNew2('RMSHFDepartment')
+
+WriteNewPo('POGenerator')
 
 
 

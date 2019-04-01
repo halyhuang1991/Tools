@@ -3,16 +3,19 @@ using System.Collections.Generic;
 using System.IO;
 using Csharp.Models;
 using Csharp.database;
+using Csharp.Mess;
+
 namespace Csharp
 {
     class Program
     {
         static void Main(string[] args)
         {
-            
+            SendMail.sendingMail();
             Console.WriteLine("\r\nHello World!");
             //Console.ReadKey();
         }
+        
        
         private static void DesignPublish(){
             Publish p = new Publish();

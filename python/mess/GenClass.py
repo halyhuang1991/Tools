@@ -89,5 +89,5 @@ def GenJavaClass(table,columns):
         ret+="\r\npublic void Set"+col+"("+datatype+" "+col.lower()+"){\r\n this."+col.lower()+"="+col.lower()+"};\r\n"
     ret+='\t\t}'
     return ret
-ret=GenCsClss('TEMP_RV','CSTORD,BOM1,DEG,EKEY,CSCOMD,CSCOM,COM,DTE05Z.D,DTE4Z.D,DTE4FZ.D,CSTREF,DLVM,NDCDAT.D,DTE30Z.D,POREF,ALLOWN.N')
+ret=GenCsClss('TEMP_CRTN','PURCNO,PURCRZ,OVY,KCOL,CSRMCN,QTYORD.N,BBVALQ.N,DLVRZZ,SUG,UNM,UNITPR.N,CRNCD')
 print(ret)

@@ -1,5 +1,7 @@
- basedata.qa_supplierinat(v_skey => :v_skey,
-                           v_inatflg => :v_inatflg,
-                           v_flg => :v_flg,
-                           v_user => :v_user,
-                           err_msg => :err_msg)
+plic_package.plic_unlock_object(v_lckobj1 => :v_lckobj1,
+                                  v_lckobj2 => :v_lckobj2,
+                                  v_lckobj3 => :v_lckobj3,
+                                  v_lckobj4 => :v_lckobj4,
+                                  v_usride => :v_usride,
+                                  v_pgmid => :v_pgmid,
+                                  v_token => :v_token)
