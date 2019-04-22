@@ -1,7 +1,7 @@
 # Tools
 > CSharp 测试
  - database 简单封装Redis和MongoDB
- - EF 对.net Core的EntityFramework进行实践，除Mssql没问题，其他的接口有报错
+ - EF 对.net Core的EntityFramework进行实践，除Mssql没问题，其他的数据库接口有报错
  - Mess 杂物堆
 > js JavaScript 测试
  + 对jquery仿写,了解原理
