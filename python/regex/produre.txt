@@ -1,7 +1,7 @@
-plic_package.plic_unlock_object(v_lckobj1 => :v_lckobj1,
-                                  v_lckobj2 => :v_lckobj2,
-                                  v_lckobj3 => :v_lckobj3,
-                                  v_lckobj4 => :v_lckobj4,
-                                  v_usride => :v_usride,
-                                  v_pgmid => :v_pgmid,
-                                  v_token => :v_token)
+lot_module.lot_sav_search_method(v_cstord => :v_cstord,
+                                   v_deg => :v_deg,
+                                   v_scl => :v_scl,
+                                   v_fgetd => :v_fgetd,
+                                   v_prcsch => :v_prcsch,
+                                   v_user => :v_user,
+                                   err_msg => :err_msg);

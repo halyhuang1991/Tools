@@ -56,7 +56,7 @@ def WriteNewSO(name):
     path=r"D:\NewWork\BEWeb\BENet\BE.Web\App_Code\Handlers\Salord\SpecialOrderDataHandler.ashx.cs"
     CopyRewrite(path,name,dic,'SpecialOrder')
     print('ok')
-def WriteNewPo(name):
+def WriteNewPO(name):
     if name=='':
         return
     path=r"D:\NewWork\BEWeb\BENet\BE.Web\Handlers\Purord\RMSHFDepartmentDataHandler.ashx"
@@ -70,7 +70,7 @@ def WriteNewPo(name):
     CopyRewrite(path,name,dic,'RMSHFDepartment')
     print('ok')
 
-WriteNewPo('POGenerator')
+WriteNewSO('LotPackPrice')
 
 
 

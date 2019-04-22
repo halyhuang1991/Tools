@@ -4,14 +4,21 @@ using System.IO;
 using Csharp.Models;
 using Csharp.database;
 using Csharp.Mess;
-
+using System.Collections;
+using System.IO;
 namespace Csharp
 {
     class Program
     {
         static void Main(string[] args)
         {
-            SendMail.sendingMail();
+            var path="D:\\er\\er.txt";
+            path= Path.GetDirectoryName(path);
+            Console.WriteLine(path);
+            DirectoryInfo df=new DirectoryInfo(path);
+            if(!df.Exists){
+                  Console.WriteLine("\r\nDirectoryInfo!");
+            }
             Console.WriteLine("\r\nHello World!");
             //Console.ReadKey();
         }
