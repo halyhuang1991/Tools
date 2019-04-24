@@ -138,5 +138,21 @@ namespace Csharp.Mess
                 dataSet.WriteXml(fileStream);
             }
         }
+        private static void XmlSerialize()
+        {
+            List<remark> list = new List<remark>();
+            remark p1 = new remark() { id = 1, name = "张三" };
+            remark p2 = new remark() { id = 2, name = "李四"};
+            list.Add(p1);
+            list.Add(p2);
+
+            //xml序列化,System.Xml.Serialization.XmlSerializer
+            // XmlSerializer xmlSer = new XmlSerializer(typeof(List<remark>));
+            // using (System.IO.FileStream fs = System.IO.File.OpenWrite("remark.xml"))
+            // {
+            //     xmlSer.Serialize(fs, list);
+            //     list = (List<remark>)xmlSer.Deserialize(fs); 
+            // }
+        }
     }
 }
