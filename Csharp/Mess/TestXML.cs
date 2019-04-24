@@ -45,16 +45,17 @@ namespace Csharp.Mess
                     break;
                 }
                 memoryCache.Remove(cacheKey);
-                 //缓存回调 10秒过期会回调
+                //缓存优先级 （程序压力大时，会根据优先级自动回收）
+                memoryCache.Set(cacheKey, result, new MemoryCacheEntryOptions()
+                    .SetPriority(CacheItemPriority.NeverRemove));
+            }else{
+                //缓存回调 10秒过期会回调
                 memoryCache.Set(cacheKey, result, new MemoryCacheEntryOptions()
                     .SetAbsoluteExpiration(TimeSpan.FromSeconds(10))
                     .RegisterPostEvictionCallback((key, value, reason, substate) =>
                     {
                         Console.WriteLine($"键{key}值{value}改变，因为{reason}");
                     }));
-                //缓存优先级 （程序压力大时，会根据优先级自动回收）
-                memoryCache.Set(cacheKey, result, new MemoryCacheEntryOptions()
-                    .SetPriority(CacheItemPriority.NeverRemove));
             }
             return result;
         }
