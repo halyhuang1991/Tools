@@ -2,8 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
+using System.Linq;
 using System.Xml;
+using System.Xml.Linq;
 using Csharp.Models;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace Csharp.Mess
 {
@@ -19,6 +22,41 @@ namespace Csharp.Mess
             }
             WriteListXMl<book>(ls);
 
+        }
+        private static string GetCacheXML(string cacheKey){
+              //1、获取内存缓存对象
+            IMemoryCache memoryCache=new MemoryCache(new MemoryCacheOptions());
+            string result;
+            if (!memoryCache.TryGetValue(cacheKey, out result)){
+                result = $"LineZero{DateTime.Now}";
+                XDocument doc = new XDocument();
+                doc = XDocument.Load("SystemInfo.xml");
+                var classData = (from n in doc.Root.Elements("Class")
+                                 where n.Attribute("name").Value == "Cache"
+                                 select n).ToList();
+                foreach (var item in classData.Elements("Item"))
+                {
+                   
+                    string name=(string)item.Attribute("name").Value;
+                    if(cacheKey!=name)continue;
+                    string desc=(string)item.Attribute("desc").Value;
+                    string value=(string)item.Value;
+                    result=value;
+                    break;
+                }
+                memoryCache.Remove(cacheKey);
+                 //缓存回调 10秒过期会回调
+                memoryCache.Set(cacheKey, result, new MemoryCacheEntryOptions()
+                    .SetAbsoluteExpiration(TimeSpan.FromSeconds(10))
+                    .RegisterPostEvictionCallback((key, value, reason, substate) =>
+                    {
+                        Console.WriteLine($"键{key}值{value}改变，因为{reason}");
+                    }));
+                //缓存优先级 （程序压力大时，会根据优先级自动回收）
+                memoryCache.Set(cacheKey, result, new MemoryCacheEntryOptions()
+                    .SetPriority(CacheItemPriority.NeverRemove));
+            }
+            return result;
         }
         private static void WriteListXMl<T>(List<T> ls)where T:class{
             string path;
