@@ -6,6 +6,7 @@ namespace Csharp.Mess
 {
     public class SendMail
     {
+         public static string sender="*@outlook.com";
          public static void sendingMail(){
           
             sendMail("halyhuang@*.com","","IT TEST","Mail Body");
@@ -22,7 +23,7 @@ namespace Csharp.Mess
         public static bool sendMail(string receive, string sender, string subject, string body, byte[] attachments = null)
         {
             string displayName ="halyhuang";
-            string from = "*@outlook.com";
+            string from = sender;
             var fromMailAddress = new MailboxAddress(displayName, from);
             var toMailAddress = new MailboxAddress(receive);
             var mailMessage = new MimeMessage();
@@ -47,7 +48,7 @@ namespace Csharp.Mess
                 smtpClient.Timeout = 10 * 1000;   //设置超时时间
                 string host = "smtp.office365.com";
                 int port = int.Parse("587");//587
-                string address = "*@outlook.com";
+                string address = sender;
                 string password = "*";//outlook 网站 更多设置=》邮件=》同步设置=》允许pop
                 smtpClient.Connect(host, port, MailKit.Security.SecureSocketOptions.StartTls);//连接到远程smtp服务器
                 smtpClient.Authenticate(address, password);
