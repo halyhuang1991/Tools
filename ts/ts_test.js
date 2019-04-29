@@ -8,6 +8,12 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 var Person = /** @class */ (function () {
     function Person(name) {
         this.name = name;
@@ -71,3 +77,21 @@ var Startup = /** @class */ (function () {
     return Startup;
 }());
 Startup.main();
+//-----------------------
+function Path(path) {
+    return function (target) {
+        !target.prototype.$Meta && (target.prototype.$Meta = {});
+        target.prototype.$Meta.baseUrl = path;
+    };
+}
+var HelloService = /** @class */ (function () {
+    function HelloService() {
+    }
+    HelloService = __decorate([
+        Path('/hello')
+    ], HelloService);
+    return HelloService;
+}());
+console.log(HelloService.prototype.$Meta); // 输出：{ baseUrl: '/hello' }
+var hello = new HelloService();
+console.log(hello.$Meta);

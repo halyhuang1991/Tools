@@ -1,3 +1,3 @@
 cd /d %cd%\ts
-rem tsc ts_test.ts
-tsc shapeConsumer.ts
+tsc decorate.ts
+rem tsc shapeConsumer.ts

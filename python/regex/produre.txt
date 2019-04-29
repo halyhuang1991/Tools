@@ -1,7 +1,10 @@
-lot_module.lot_sav_search_method(v_cstord => :v_cstord,
-                                   v_deg => :v_deg,
-                                   v_scl => :v_scl,
-                                   v_fgetd => :v_fgetd,
-                                   v_prcsch => :v_prcsch,
-                                   v_user => :v_user,
-                                   err_msg => :err_msg);
+lot_pack.lot_sav_packprice(v_pkprfc => :v_pkprfc,
+                             v_ms => :v_ms,
+                             v_mc => :v_mc,
+                             v_jobid => :v_jobid,
+                             v_pkprc => :v_pkprc,
+                             v_qtypk => :v_qtypk,
+                             v_pkcde => :v_pkcde,
+                             v_user => :v_user,
+                             outfname => :outfname,
+                             err_msg => :err_msg);

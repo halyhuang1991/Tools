@@ -5,6 +5,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.2.0" />
+    <PackageReference Include="Experimental.System.Messaging" Version="1.0.0" />
     <PackageReference Include="mongocsharpdriver" Version="2.7.0" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="Oracle.ManagedDataAccess" Version="18.6.0" />
