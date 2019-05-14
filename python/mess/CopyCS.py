@@ -70,7 +70,7 @@ def WriteNewPO(name):
     CopyRewrite(path,name,dic,'RMSHFDepartment')
     print('ok')
 
-WriteNewSO('LotPackPrice')
+WriteNewPO('SupplierInvoice')
 
 
 

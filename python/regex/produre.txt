@@ -1,10 +1,4 @@
-lot_pack.lot_sav_packprice(v_pkprfc => :v_pkprfc,
-                             v_ms => :v_ms,
-                             v_mc => :v_mc,
-                             v_jobid => :v_jobid,
-                             v_pkprc => :v_pkprc,
-                             v_qtypk => :v_qtypk,
-                             v_pkcde => :v_pkcde,
-                             v_user => :v_user,
-                             outfname => :outfname,
-                             err_msg => :err_msg);
+po_supplier_inv.po_inv_savepo(v_spinvno => :v_spinvno,
+                                v_jobid => :v_jobid,
+                                v_user => :v_user,
+                                err_msg => :err_msg);
