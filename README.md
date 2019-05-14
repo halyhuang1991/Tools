@@ -20,7 +20,7 @@ function a(name){
 BaseObject.prototype.change=function(callback){
 }
 ```
- + mermaid https://mermaidjs.github.io/
+ + mermaid https://mermaidjs.github.io/       Markdown Preview Mermaid Support
 ```mermaid
 graph TD;
 export --> import;
