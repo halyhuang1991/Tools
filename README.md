@@ -24,7 +24,7 @@ BaseObject.prototype.change=function(callback){
 ```mermaid
 graph TD;
 export --> import;
-event-->change;event-->delegate;
+event-->bind;event-->delegate;
 ```
  + Nodejs里的require exports 
 > Python 工作时的便利
