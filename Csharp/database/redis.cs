@@ -46,6 +46,17 @@ namespace Csharp
                 return result;
             }
         }
+        public static string keyRemove(string key)
+        {
+            using (var redis = ConnectionMultiplexer.Connect(connstring))
+            {
+                //读取
+                var db = redis.GetDatabase();
+                var result = db.StringGet(key);
+                db.KeyDelete(key);
+                return result;
+            }
+        }
         public static void SetList(string key,List<string> ls,DateTime? date = null)
         {
             if (ls == null)
@@ -173,6 +184,37 @@ namespace Csharp
                 }
 
             }
+        }
+        public static string Lock(string  key,string value,Func<string> a){
+            RedisValue token = Environment.MachineName;
+            string msg="";
+            using (var redis = ConnectionMultiplexer.Connect(connstring))
+            {
+                //读取
+                var db = redis.GetDatabase();
+                bool t=db.LockTake(key, value, TimeSpan.FromSeconds(100));
+                if (t)
+                {
+                    try
+                    {
+                        bool flg=true;
+                        while(flg){
+                            string r=a();
+                            if(r!=""){
+                                flg=false;
+                                msg=r;
+                            }
+                        }
+                        
+                    }
+                    finally
+                    {
+                        db.LockRelease(key, value);//释放锁
+                    }
+                }
+
+            }
+            return msg;
         }
         public static void Publish(string key,string value){
             using (var redis = ConnectionMultiplexer.Connect(connstring))

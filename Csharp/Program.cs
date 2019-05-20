@@ -7,14 +7,17 @@ using Csharp.Mess;
 using System.Collections;
 using System.IO;
 using System.Threading.Tasks;
+using Csharp.Design;
 
 namespace Csharp
 {
+    
+
     class Program{
     
         static void Main(string[] args)
         {
-            
+            RedisLock.test();
             Console.WriteLine("\r\nHello World!");
             //Console.ReadKey();
         }

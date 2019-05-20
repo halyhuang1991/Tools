@@ -1,4 +1,4 @@
-po_supplier_inv.po_inv_savepo(v_spinvno => :v_spinvno,
-                                v_jobid => :v_jobid,
-                                v_user => :v_user,
-                                err_msg => :err_msg);
+po_shf_process.po_shf_headconfirm(v_shfref => :v_shfref,
+                                    v_confir => :v_confir,
+                                    v_user => :v_user,
+                                    err_msg => :err_msg);

@@ -37,6 +37,7 @@ namespace Csharp.Design
     }
     public class ext:staticMethod{
         public ext(string msg):base(msg){
+           Console.WriteLine("ext");
            Console.WriteLine(msg);
         }
     }

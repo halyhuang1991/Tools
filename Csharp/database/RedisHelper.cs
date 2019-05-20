@@ -2,6 +2,7 @@ using Newtonsoft.Json;
 using NServiceKit.Redis;
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Csharp.database
 {
@@ -137,6 +138,15 @@ namespace Csharp.database
                 Console.WriteLine(this.Redis.DequeueItemFromList(key));
             }
             return true;
+        }
+        public bool Lock(string key,string value){
+            bool ret=false;
+            byte[] byteArray;//=byteArray = SomeHelper.SerializeBinary(value);
+            byteArray=Encoding.UTF8.GetBytes(value);
+            if(this.Redis.SetNX(key,byteArray)==1){
+                ret=true;
+            };
+            return ret;
         }
          public bool transation(string key,string value){
              Action act=()=>{
