@@ -34,6 +34,11 @@ namespace Csharp.Mess
     {
         private string[] arr=new string[1024];
         private int len=0;
+        public string this[int index]
+       {
+           get { return arr[index]; }
+           set { arr[index] = value; }
+       }
         public void Add(string s)
         {
             if (len==arr.Length)

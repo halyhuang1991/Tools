@@ -26,6 +26,7 @@ namespace Csharp
             {
                 Console.WriteLine("foreach2 " + s);
             }
+            Console.WriteLine("index==="+a[1]);
             Console.WriteLine("\r\nHello World!");
             // Console.Read();
         }
