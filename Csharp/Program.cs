@@ -17,7 +17,15 @@ namespace Csharp
     
         static void Main(string[] args)
         {
-            HashLock.test();
+             MyIEnumerable a = new MyIEnumerable() { "张三", "李四" };
+            a.Add("ok");
+            foreach(string s in a.TopToBottom){
+                Console.WriteLine("foreach "+s);
+            }
+            foreach (string s in a)
+            {
+                Console.WriteLine("foreach2 " + s);
+            }
             Console.WriteLine("\r\nHello World!");
             // Console.Read();
         }
