@@ -5,9 +5,9 @@ using Csharp.Models;
 using Csharp.database;
 using Csharp.Mess;
 using System.Collections;
-using System.IO;
 using System.Threading.Tasks;
 using Csharp.Design;
+using Csharp.helpers;
 
 namespace Csharp
 {
@@ -17,9 +17,9 @@ namespace Csharp
     
         static void Main(string[] args)
         {
-            RedisLock.test();
+            HashLock.test();
             Console.WriteLine("\r\nHello World!");
-            //Console.ReadKey();
+            // Console.Read();
         }
         
        

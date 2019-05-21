@@ -11,7 +11,7 @@ namespace Csharp.Mess
             Console.WriteLine("single quotes count="+ix);
             int index = 0;
             ix = 0; 
-            int ip = 0; int iq = 0;
+            int ip = 0; 
             char[] crs = s.Trim().ToCharArray();
             System.Text.StringBuilder sb = new System.Text.StringBuilder();
             while (index < crs.Length)

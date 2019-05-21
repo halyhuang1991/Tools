@@ -10608,6 +10608,7 @@
       "ServiceStack >= 5.1.0",
       "ServiceStack.OrmLite >= 5.1.0",
       "StackExchange.Redis >= 2.0.0-alpha.281",
+      "System.Collections.Concurrent >= 4.3.0",
       "dotnet-svcutil >= 1.0.4",
       "mongocsharpdriver >= 2.7.0",
       "nunit.framework >= 2.63.0"
@@ -10744,6 +10745,10 @@
           "StackExchange.Redis": {
             "target": "Package",
             "version": "[2.0.0-alpha.281, )"
+          },
+          "System.Collections.Concurrent": {
+            "target": "Package",
+            "version": "[4.3.0, )"
           },
           "dotnet-svcutil": {
             "target": "Package",
