@@ -18,7 +18,7 @@ namespace Csharp
     
         static void Main(string[] args)
         {
-          
+            DtAsnc.Test();
             Console.WriteLine("\r\nHello World!");
             // Console.Read();
         }
