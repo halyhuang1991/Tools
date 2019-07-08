@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Xml.Serialization;
 using Newtonsoft.Json;
 
 namespace Csharp.helpers
@@ -62,5 +64,66 @@ namespace Csharp.helpers
             List<T> list = o as List<T>;
             return list;
         }
+        /// <summary>
+        /// 反序列化XML为类实例  
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="xmlObj">从xml文件读取的字符串</param>
+        /// <returns></returns>
+        public static T DeserializeXML<T>(string xmlObj)
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(T));
+            using (StringReader reader = new StringReader(xmlObj))
+            {
+                return (T)serializer.Deserialize(reader);
+            }
+        }
+        /// <summary>
+        /// 序列化实例为XML
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public static string SerializeXML<T>(T obj) {
+            using (StringWriter writer = new StringWriter())
+            {
+                new XmlSerializer(obj.GetType()).Serialize((TextWriter)writer, obj);
+                return writer.ToString();
+            }
+        }
+      
+    }
+    [Serializable]
+    public class Root
+    {
+        [XmlElement("Person")]
+        public Person person;
+        //public Person Person;
+        [XmlArray("MedicalItems"),XmlArrayItem("MedicalSub")]
+        public List<medicalSub> medicalItems;
+        //public List<MedicalSub> MedicalItems;
+    }
+    [Serializable]
+    public class medicalSub{
+      [XmlAttribute]
+        public string ID;
+
+        [XmlAttribute]
+        public string Name;
+
+       
+    }
+    public class Person{
+       [XmlAttribute]
+        public string HospitalName;
+
+        [XmlArrayItem("Result")]
+        public List<string> Results;
+
+        [XmlArrayItem("Conclusion")]
+        public List<string> Conclusions;
+
+        [XmlArrayItem("Suggestion")]
+        public List<string> Suggestions;
     }
 }

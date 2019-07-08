@@ -9,6 +9,7 @@ using System.Collections;
 using System.Threading.Tasks;
 using Csharp.Design;
 using Csharp.helpers;
+using Csharp.method;
 
 namespace Csharp
 {
@@ -18,7 +19,8 @@ namespace Csharp
     
         static void Main(string[] args)
         {
-            DtAsnc.Test();
+           Task1 task=new Task1();
+           task.test();
             Console.WriteLine("\r\nHello World!");
             // Console.Read();
         }
