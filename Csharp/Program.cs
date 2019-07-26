@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using Csharp.Design;
 using Csharp.helpers;
 using Csharp.method;
+using System.Text.RegularExpressions;
 
 namespace Csharp
 {
@@ -19,8 +20,9 @@ namespace Csharp
     
         static void Main(string[] args)
         {
-           Task1 task=new Task1();
-           task.test();
+            var s="<td class='image edit'><input  type='image' src='/images/icon/edit.gif' tabindex='-1' /></td>";
+            s=Regex.Replace(s,"src='(?<str>.*?)'","src='11'");
+            Console.WriteLine(s);
             Console.WriteLine("\r\nHello World!");
             // Console.Read();
         }
