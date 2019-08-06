@@ -1,3 +1,3 @@
 cd /d %cd%\ts
-tsc decorate.ts
+tsc DateString.ts
 rem tsc shapeConsumer.ts

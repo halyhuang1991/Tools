@@ -20,9 +20,7 @@ namespace Csharp
     
         static void Main(string[] args)
         {
-            var s="<td class='image edit'><input  type='image' src='/images/icon/edit.gif' tabindex='-1' /></td>";
-            s=Regex.Replace(s,"src='(?<str>.*?)'","src='11'");
-            Console.WriteLine(s);
+           Event1.Run();
             Console.WriteLine("\r\nHello World!");
             // Console.Read();
         }
