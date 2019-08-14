@@ -20,9 +20,9 @@ namespace Csharp
     
         static void Main(string[] args)
         {
-           Event1.Run();
+            mannual.Run();
             Console.WriteLine("\r\nHello World!");
-            // Console.Read();
+            //Console.Read();
         }
         
        
